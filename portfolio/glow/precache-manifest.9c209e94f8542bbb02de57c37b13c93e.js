@@ -1,7 +1,7 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "27e5d59eb4c69a4568d0",
-    "url": "/portfolio/glow/css/app.56e9237c.css"
+    "revision": "238ba6e8264fb2282d68",
+    "url": "/portfolio/glow/css/app.f9c1cf9a.css"
   },
   {
     "revision": "d5793c8972ce0e9198646a9bf7aa596c",
@@ -120,36 +120,36 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/portfolio/glow/img/icons/safari-pinned-tab.svg"
   },
   {
-    "revision": "54d4c340145b578ab0b9f2ec1e963325",
+    "revision": "9a0686718d4909dfa5e106bf0e5918db",
     "url": "/portfolio/glow/index.html"
   },
   {
-    "revision": "593749a7a7dcdd561ccc",
-    "url": "/portfolio/glow/js/about.34a45686.js"
+    "revision": "78af53437191a4555c90",
+    "url": "/portfolio/glow/js/about.ccfa89d4.js"
   },
   {
-    "revision": "27e5d59eb4c69a4568d0",
-    "url": "/portfolio/glow/js/app.4dcf045b.js"
+    "revision": "238ba6e8264fb2282d68",
+    "url": "/portfolio/glow/js/app.9429ea1e.js"
   },
   {
     "revision": "4fa3b1c251659208f8a0",
     "url": "/portfolio/glow/js/chunk-vendors.3d04925a.js"
   },
   {
-    "revision": "ce6e6c871ba15d5b06be",
-    "url": "/portfolio/glow/js/daily.0b21d861.js"
+    "revision": "1895b316920fcba79e7c",
+    "url": "/portfolio/glow/js/daily.87297aeb.js"
   },
   {
-    "revision": "2ad01f4d7e6a466dd021",
-    "url": "/portfolio/glow/js/detail.5a2cf42f.js"
+    "revision": "9de7b5b174dd730a1e42",
+    "url": "/portfolio/glow/js/detail.c88c8c9c.js"
   },
   {
     "revision": "a8a909d6b6be6476c1fb",
     "url": "/portfolio/glow/js/favorite.90106ee1.js"
   },
   {
-    "revision": "2fd17c49a8433bf4532a",
-    "url": "/portfolio/glow/js/hourly.ab3727a8.js"
+    "revision": "b25ee620bdd096b3d292",
+    "url": "/portfolio/glow/js/hourly.7736e2fa.js"
   },
   {
     "revision": "37f7777a50f64eaf72f2",
