@@ -808,124 +808,6 @@ customElements.define('domain-check', DomainCheck);
 
 /***/ }),
 
-/***/ 185:
-/***/ (() => {
-
-function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
-
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
-
-function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
-
-function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
-
-function _createSuper(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct(); return function _createSuperInternal() { var Super = _getPrototypeOf(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = _getPrototypeOf(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _possibleConstructorReturn(this, result); }; }
-
-function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } else if (call !== void 0) { throw new TypeError("Derived constructors may only return object or undefined"); } return _assertThisInitialized(self); }
-
-function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
-
-function _wrapNativeSuper(Class) { var _cache = typeof Map === "function" ? new Map() : undefined; _wrapNativeSuper = function _wrapNativeSuper(Class) { if (Class === null || !_isNativeFunction(Class)) return Class; if (typeof Class !== "function") { throw new TypeError("Super expression must either be null or a function"); } if (typeof _cache !== "undefined") { if (_cache.has(Class)) return _cache.get(Class); _cache.set(Class, Wrapper); } function Wrapper() { return _construct(Class, arguments, _getPrototypeOf(this).constructor); } Wrapper.prototype = Object.create(Class.prototype, { constructor: { value: Wrapper, enumerable: false, writable: true, configurable: true } }); return _setPrototypeOf(Wrapper, Class); }; return _wrapNativeSuper(Class); }
-
-function _construct(Parent, args, Class) { if (_isNativeReflectConstruct()) { _construct = Reflect.construct; } else { _construct = function _construct(Parent, args, Class) { var a = [null]; a.push.apply(a, args); var Constructor = Function.bind.apply(Parent, a); var instance = new Constructor(); if (Class) _setPrototypeOf(instance, Class.prototype); return instance; }; } return _construct.apply(null, arguments); }
-
-function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Boolean.prototype.valueOf.call(Reflect.construct(Boolean, [], function () {})); return true; } catch (e) { return false; } }
-
-function _isNativeFunction(fn) { return Function.toString.call(fn).indexOf("[native code]") !== -1; }
-
-function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
-
-function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
-
-var EmailLookup = /*#__PURE__*/function (_HTMLElement) {
-  _inherits(EmailLookup, _HTMLElement);
-
-  var _super = _createSuper(EmailLookup);
-
-  function EmailLookup() {
-    _classCallCheck(this, EmailLookup);
-
-    return _super.apply(this, arguments);
-  }
-
-  _createClass(EmailLookup, [{
-    key: "connectedCallback",
-    value: function connectedCallback() {
-      this.render();
-    }
-  }, {
-    key: "emailRecordData",
-    set: function set(data) {
-      this.emailData = data;
-
-      if (this.emailData.formatCheck.toLowerCase() === 'true') {
-        this.formatCheck = '<p class="green">The email address is valid</p>';
-      } else {
-        this.formatCheck = '<p class="red">The email address is invalid</p>';
-      }
-
-      if (this.emailData.smtpCheck.toLowerCase() === 'true') {
-        this.smtpCheck = '<p class="green">The email address exists and can receive email over SMTP.</p>';
-      } else {
-        this.smtpCheck = "\n                <p class=\"red\">\n                    The email address doesn't exist on the target SMTP server,\n                    doesn't use SMTP protocol or temporarily couldn't receive messages.\n                </p>";
-      }
-
-      if (this.emailData.dnsCheck.toLowerCase() === 'true') {
-        this.dnsCheck = '<p class="green">The domain in the email address has passed DNS check.</p>';
-      } else {
-        this.dnsCheck = '<p class="red">The domain in email address hasn\'t passed DNS check.</p>';
-      }
-
-      if (this.emailData.freeCheck.toLowerCase() === 'true') {
-        this.freeCheck = '<p class="green">The email address is free.</p>';
-      } else {
-        this.freeCheck = '<p class="green">The email address is paid.</p>';
-      }
-
-      if (this.emailData.disposableCheck.toLowerCase() === 'true') {
-        this.disposableCheck = '<p class="red">The email address is disposable.</p>';
-      } else {
-        this.disposableCheck = '<p class="green">The email address isn\'t disposable.</p>';
-      }
-
-      if (this.emailData.catchAllCheck.toLowerCase() === 'true') {
-        this.catchAllCheck = '<p class="green">The mail server has a <i>"catch-all"</i> address.</p>';
-      } else {
-        this.catchAllCheck = '<p class="red">The mail server doesn\'t have a <i>"catch-all"</i> address.</p>';
-      }
-
-      if (this.emailData.mxRecords) {
-        var mxRecords = this.emailData.mxRecords;
-        mxRecords = mxRecords.toString().replace(/,/g, '<br>');
-        this.mxRecord = mxRecords.toLowerCase();
-      } else {
-        this.mxRecord = '-';
-      }
-
-      if (this.emailData.formatCheck.toLowerCase() === 'true' && this.emailData.dnsCheck.toLowerCase() === 'true') {
-        this.result = "<p class=\"green\"><b>Yey! ".concat(this.emailData.emailAddress, " is valid.</b></p>");
-        this.illustraion = '<img src="assets/illustration/check.svg" alt="Email valid" class="illustration">';
-      } else {
-        this.result = "<p class=\"red\"><b>Sorry, ".concat(this.emailData.emailAddress, " is invalid.</b></p>");
-        this.illustraion = '<img src="assets/illustration/cross.svg" alt="Email invalid" class="illustration">';
-      }
-    }
-  }, {
-    key: "render",
-    value: function render() {
-      this.innerHTML = "\n            <div class=\"content pb-8\">\n                ".concat(this.illustraion, "\n                ").concat(this.result, "\n                <p>Check detail below</p>\n            </div>\n            <div class=\"card\">\n                <div class=\"card-header\">Email Verification Detail</div>\n                <div class=\"card-body\">\n                    <div class=\"card-body-divide\">\n                        <div class=\"card-content-key\">Email address</div>\n                        <div class=\"card-content-value\">").concat(this.emailData.emailAddress, "</div>\n                    </div>\n                    <div class=\"card-body-divide\">\n                        <div class=\"card-content-key\">Email address check</div>\n                        <div class=\"card-content-value\">").concat(this.formatCheck, "</div>\n                    </div>\n                    <div class=\"card-body-divide\">\n                        <div class=\"card-content-key\">SMTP check</div>\n                        <div class=\"card-content-value\">").concat(this.smtpCheck, "</div>\n                    </div>\n                    <div class=\"card-body-divide\">\n                        <div class=\"card-content-key\">Domain name system check</div>\n                        <div class=\"card-content-value\">").concat(this.dnsCheck, "</div>\n                    </div>\n                    <div class=\"card-body-divide\">\n                        <div class=\"card-content-key\">Free email address check</div>\n                        <div class=\"card-content-value\">").concat(this.freeCheck, "</div>\n                    </div>\n                    <div class=\"card-body-divide\">\n                        <div class=\"card-content-key\">Check email provider for abuse</div>\n                        <div class=\"card-content-value\">").concat(this.disposableCheck, "</div>\n                    </div>\n                    <div class=\"card-body-divide\">\n                        <div class=\"card-content-key\">Catch all emails address</div>\n                        <div class=\"card-content-value\">").concat(this.catchAllCheck, "</div>\n                    </div>\n                    <div class=\"card-body-divide-last-child\">\n                        <div class=\"card-content-key\">mxRecords</div>\n                        <div class=\"card-content-value\">").concat(this.mxRecord, "</div>\n                    </div>\n                </div>\n            </div>            \n            <div class=\"last-update\">Last updated at ").concat(this.emailData.audit.auditUpdatedDate || '-', "</div>\n        ");
-    }
-  }]);
-
-  return EmailLookup;
-}( /*#__PURE__*/_wrapNativeSuper(HTMLElement));
-
-customElements.define('email-lookup', EmailLookup);
-
-/***/ }),
-
 /***/ 107:
 /***/ (() => {
 
@@ -992,7 +874,7 @@ customElements.define('error-page', ErrorPage);
 
 /***/ }),
 
-/***/ 569:
+/***/ 390:
 /***/ (() => {
 
 function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
@@ -1054,12 +936,12 @@ var GeolocationLookup = /*#__PURE__*/function (_HTMLElement) {
     key: "render",
     value: function render() {
       if (this.data.as) {
-        this.as = "\n                <div class=\"card\">\n                    <div class=\"card-header\">Autonomus System Information</div>\n                    <div class=\"card-body\">\n                        <div class=\"card-body-divide\">\n                            <div class=\"card-content-key\">AS Number </div>\n                            <div class=\"card-content-value\">\n                                ".concat(this.data.as.asn || '-', "\n                            </div>\n                        </div>\n                        <div class=\"card-body-divide\">\n                            <div class=\"card-content-key\">AS Name</div>\n                            <div class=\"card-content-value\">\n                                ").concat(this.data.as.asn || '-', "\n                            </div>\n                        </div>\n                        <div class=\"card-body-divide\">\n                            <div class=\"card-content-key\">AS Route</div>\n                            <div class=\"card-content-value\">\n                                ").concat(this.data.as.route || '-', "\n                            </div>\n                        </div>\n                        <div class=\"card-body-divide\">\n                            <div class=\"card-content-key\">AS Website's URL</div>\n                            <div class=\"card-content-value\">\n                                ").concat(this.data.as.domain || '-', "\n                            </div>\n                        </div>\n                        <div class=\"card-body-divide-last-child\">\n                            <div class=\"card-content-key\">AS Type</div>\n                            <div class=\"card-content-value\">").concat(this.data.as.type || '', "</div>\n                        </div>\n                    </div>\n                </div>\n            ");
+        this.as = "\n                <div class=\"card\">\n                    <div class=\"card-header\">Autonomus System Information</div>\n                    <div class=\"card-body\">\n                        <div class=\"card-body-divide\">\n                            <div class=\"card-content-key\">AS Number </div>\n                            <div class=\"card-content-value\">\n                                ".concat(this.data.as.asn || '-', "\n                            </div>\n                        </div>\n                        <div class=\"card-body-divide\">\n                            <div class=\"card-content-key\">AS Name</div>\n                            <div class=\"card-content-value\">\n                                ").concat(this.data.as.asn || '-', "\n                            </div>\n                        </div>\n                        <div class=\"card-body-divide\">\n                            <div class=\"card-content-key\">AS Route</div>\n                            <div class=\"card-content-value\">\n                                ").concat(this.data.as.route || '-', "\n                            </div>\n                        </div>\n                        <div class=\"card-body-divide\">\n                            <div class=\"card-content-key\">AS Website's URL</div>\n                            <div class=\"card-content-value\">\n                                ").concat(this.data.as.domain || '-', "\n                            </div>\n                        </div>\n                        <div class=\"card-body-divide\">\n                            <div class=\"card-content-key\">AS Type</div>\n                            <div class=\"card-content-value\">").concat(this.data.as.type || '', "</div>\n                        </div>\n                    </div>\n                </div>\n            ");
       } else {
         this.as = '';
       }
 
-      this.innerHTML = "\n            <div class=\"card\">\n                <div class=\"card-header\">Location Information</div>\n                <div class=\"card-body\">\n                    <div class=\"card-body-divide\">\n                        <div class=\"card-content-key\">Country</div>\n                        <div class=\"card-content-value\">\n                            ".concat(this.data.location.country || '-', "\n                        </div>\n                    </div>\n                    <div class=\"card-body-divide\">\n                        <div class=\"card-content-key\">Region</div>\n                        <div class=\"card-content-value\">\n                            ").concat(this.data.location.region || '-', "\n                        </div>\n                    </div>\n                    <div class=\"card-body-divide\">\n                        <div class=\"card-content-key\">City</div>\n                        <div class=\"card-content-value\">\n                            ").concat(this.data.location.city || '-', "\n                        </div>\n                    </div>\n                    <div class=\"card-body-divide\">\n                        <div class=\"card-content-key\">Latitude</div>\n                        <div class=\"card-content-value\">\n                            ").concat(this.data.location.lat || '-', "\n                        </div>\n                    </div>\n                    <div class=\"card-body-divide\">\n                        <div class=\"card-content-key\">Longiude</div>\n                        <div class=\"card-content-value\">\n                            ").concat(this.data.location.lng || '-', "\n                        </div>\n                    </div>\n                    <div class=\"card-body-divide\">\n                        <div class=\"card-content-key\">Postal Code</div>\n                        <div class=\"card-content-value\">\n                            ").concat(this.data.location.postalCode || '-', "\n                        </div>\n                    </div>\n                    <div class=\"card-body-divide\">\n                        <div class=\"card-content-key\">Timezone</div>\n                        <div class=\"card-content-value\">\n                            ").concat(this.data.location.timezone || '-', "\n                        </div>\n                    </div>\n                    <div class=\"card-body-divide-last-child\">\n                        <div class=\"card-content-key\">Geoname ID</div>\n                        <div class=\"card-content-value\">").concat(this.data.location.geonameId || '', "</div>\n                    </div>\n                </div>\n            </div>\n            <div class=\"card\">\n                <div class=\"card-header\">Network Information</div>\n                <div class=\"card-body\">\n                    <div class=\"card-body-divide\">\n                        <div class=\"card-content-key\">IP</div>\n                        <div class=\"card-content-value\">\n                            ").concat(this.data.ip || '-', "\n                        </div>\n                    </div>\n                    <div class=\"card-body-divide\">\n                        <div class=\"card-content-key\">Internet Service Provider</div>\n                        <div class=\"card-content-value\">\n                            ").concat(this.data.isp || '-', "\n                        </div>\n                    </div>\n                    <div class=\"card-body-divide\">\n                        <div class=\"card-content-key\">Connection Type</div>\n                        <div class=\"card-content-value\">\n                            ").concat(this.data.connectionType || '-', "\n                        </div>\n                    </div>\n                    <div class=\"card-body-divide-last-child\">\n                        <div class=\"card-content-key\">Domain</div>\n                        <div class=\"card-content-value\">\n                            ").concat(this.domains || '-', "\n                        </div>\n                    </div>\n                </div>\n            </div>\n            ").concat(this.as, "\n        ");
+      this.innerHTML = "\n            <div class=\"card\">\n                <div class=\"card-header\">Location Information</div>\n                <div class=\"card-body\">\n                    <div class=\"card-body-divide\">\n                        <div class=\"card-content-key\">Country</div>\n                        <div class=\"card-content-value\">\n                            ".concat(this.data.location.country || '-', "\n                        </div>\n                    </div>\n                    <div class=\"card-body-divide\">\n                        <div class=\"card-content-key\">Region</div>\n                        <div class=\"card-content-value\">\n                            ").concat(this.data.location.region || '-', "\n                        </div>\n                    </div>\n                    <div class=\"card-body-divide\">\n                        <div class=\"card-content-key\">City</div>\n                        <div class=\"card-content-value\">\n                            ").concat(this.data.location.city || '-', "\n                        </div>\n                    </div>\n                    <div class=\"card-body-divide\">\n                        <div class=\"card-content-key\">Latitude</div>\n                        <div class=\"card-content-value\">\n                            ").concat(this.data.location.lat || '-', "\n                        </div>\n                    </div>\n                    <div class=\"card-body-divide\">\n                        <div class=\"card-content-key\">Longiude</div>\n                        <div class=\"card-content-value\">\n                            ").concat(this.data.location.lng || '-', "\n                        </div>\n                    </div>\n                    <div class=\"card-body-divide\">\n                        <div class=\"card-content-key\">Postal Code</div>\n                        <div class=\"card-content-value\">\n                            ").concat(this.data.location.postalCode || '-', "\n                        </div>\n                    </div>\n                    <div class=\"card-body-divide\">\n                        <div class=\"card-content-key\">Timezone</div>\n                        <div class=\"card-content-value\">\n                            ").concat(this.data.location.timezone || '-', "\n                        </div>\n                    </div>\n                    <div class=\"card-body-divide\">\n                        <div class=\"card-content-key\">Geoname ID</div>\n                        <div class=\"card-content-value\">").concat(this.data.location.geonameId || '', "</div>\n                    </div>\n                </div>\n            </div>\n            <div class=\"card\">\n                <div class=\"card-header\">Network Information</div>\n                <div class=\"card-body\">\n                    <div class=\"card-body-divide\">\n                        <div class=\"card-content-key\">IP</div>\n                        <div class=\"card-content-value\">\n                            ").concat(this.data.ip || '-', "\n                        </div>\n                    </div>\n                    <div class=\"card-body-divide\">\n                        <div class=\"card-content-key\">Internet Service Provider</div>\n                        <div class=\"card-content-value\">\n                            ").concat(this.data.isp || '-', "\n                        </div>\n                    </div>\n                    <div class=\"card-body-divide\">\n                        <div class=\"card-content-key\">Connection Type</div>\n                        <div class=\"card-content-value\">\n                            ").concat(this.data.connectionType || '-', "\n                        </div>\n                    </div>\n                    <div class=\"card-body-divide\">\n                        <div class=\"card-content-key\">Domain</div>\n                        <div class=\"card-content-value\">\n                            ").concat(this.domains || '-', "\n                        </div>\n                    </div>\n                </div>\n            </div>\n            ").concat(this.as, "\n        ");
     }
   }]);
 
@@ -1228,99 +1110,11 @@ customElements.define('input-search', InputSearch);
 
 /***/ }),
 
-/***/ 390:
-/***/ (() => {
-
-function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
-
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
-
-function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
-
-function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
-
-function _createSuper(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct(); return function _createSuperInternal() { var Super = _getPrototypeOf(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = _getPrototypeOf(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _possibleConstructorReturn(this, result); }; }
-
-function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } else if (call !== void 0) { throw new TypeError("Derived constructors may only return object or undefined"); } return _assertThisInitialized(self); }
-
-function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
-
-function _wrapNativeSuper(Class) { var _cache = typeof Map === "function" ? new Map() : undefined; _wrapNativeSuper = function _wrapNativeSuper(Class) { if (Class === null || !_isNativeFunction(Class)) return Class; if (typeof Class !== "function") { throw new TypeError("Super expression must either be null or a function"); } if (typeof _cache !== "undefined") { if (_cache.has(Class)) return _cache.get(Class); _cache.set(Class, Wrapper); } function Wrapper() { return _construct(Class, arguments, _getPrototypeOf(this).constructor); } Wrapper.prototype = Object.create(Class.prototype, { constructor: { value: Wrapper, enumerable: false, writable: true, configurable: true } }); return _setPrototypeOf(Wrapper, Class); }; return _wrapNativeSuper(Class); }
-
-function _construct(Parent, args, Class) { if (_isNativeReflectConstruct()) { _construct = Reflect.construct; } else { _construct = function _construct(Parent, args, Class) { var a = [null]; a.push.apply(a, args); var Constructor = Function.bind.apply(Parent, a); var instance = new Constructor(); if (Class) _setPrototypeOf(instance, Class.prototype); return instance; }; } return _construct.apply(null, arguments); }
-
-function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Boolean.prototype.valueOf.call(Reflect.construct(Boolean, [], function () {})); return true; } catch (e) { return false; } }
-
-function _isNativeFunction(fn) { return Function.toString.call(fn).indexOf("[native code]") !== -1; }
-
-function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
-
-function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
-
-var WhoisLookup = /*#__PURE__*/function (_HTMLElement) {
-  _inherits(WhoisLookup, _HTMLElement);
-
-  var _super = _createSuper(WhoisLookup);
-
-  function WhoisLookup() {
-    _classCallCheck(this, WhoisLookup);
-
-    return _super.apply(this, arguments);
-  }
-
-  _createClass(WhoisLookup, [{
-    key: "connectedCallback",
-    value: function connectedCallback() {
-      this.render();
-    }
-  }, {
-    key: "whoisRecordData",
-    set: function set(data) {
-      this.whoisData = data;
-
-      if (this.whoisData.ips) {
-        var ips = this.whoisData.ips;
-        this.ip = ips.toString().replace(/,/g, '<br>');
-      }
-
-      if (this.whoisData.registryData.nameServers) {
-        var hostNames = this.whoisData.registryData.nameServers.hostNames;
-        hostNames = hostNames.toString().replace(/,/g, '<br>');
-        this.hostName = hostNames.toLowerCase();
-      }
-
-      if (this.whoisData.registryData.status) {
-        var status = this.whoisData.registryData.status;
-        this.status = status.toString().replace(/\s/g, '<br>');
-      }
-    }
-  }, {
-    key: "render",
-    value: function render() {
-      if (this.whoisData.registrant) {
-        this.registrant = "\n                <div class=\"card\">\n                    <div class=\"card-header\">Registrant Information</div>\n                    <div class=\"card-body\">\n                        <div class=\"card-body-divide\">\n                            <div class=\"card-content-key\">Organization</div>\n                            <div class=\"card-content-value\">\n                                ".concat(this.whoisData.registrant.organization || this.whoisData.registrant.name || '-', "\n                            </div>\n                        </div>\n                        <div class=\"card-body-divide\">\n                            <div class=\"card-content-key\">State/Province</div>\n                            <div class=\"card-content-value\">\n                                ").concat(this.whoisData.registrant.state || '-', "\n                            </div>\n                        </div>\n                        <div class=\"card-body-divide\">\n                            <div class=\"card-content-key\">Country</div>\n                            <div class=\"card-content-value\">\n                                ").concat(this.whoisData.registrant.country || '-', "\n                            </div>\n                        </div>\n                        <div class=\"card-body-divide-last-child\">\n                            <div class=\"card-content-key\">Country Code</div>\n                            <div class=\"card-content-value\">\n                                ").concat(this.whoisData.registrant.countryCode || '-', "\n                            </div>\n                        </div>\n                    </div>\n                </div>\n            ");
-      } else {
-        this.registrant = '';
-      }
-
-      this.innerHTML = "\n            <div class=\"card\">\n                <div class=\"card-header\">Domain Information</div>\n                <div class=\"card-body\">\n                    <div class=\"card-body-divide\">\n                        <div class=\"card-content-key\">Name</div>\n                        <div class=\"card-content-value\">".concat(this.whoisData.domainName || '-', "</div>\n                    </div>\n                    <div class=\"card-body-divide\">\n                        <div class=\"card-content-key\">IP Address</div>\n                        <div class=\"card-content-value\">").concat(this.ip || '-', "</div>\n                    </div>\n                    <div class=\"card-body-divide-last-child\">\n                        <div class=\"card-content-key\">Name Server</div>\n                        <div class=\"card-content-value\">").concat(this.hostName || '-', "</div>\n                    </div>\n                </div>\n            </div>\n            <div class=\"card\">\n                <div class=\"card-header\">Important Dates</div>\n                <div class=\"card-body\">\n                    <div class=\"card-body-divide\">\n                        <div class=\"card-content-key\">Created Date</div>\n                        <div class=\"card-content-value\">\n                            ").concat(this.whoisData.registryData.createdDateNormalized || '-', "\n                        </div>\n                    </div>\n                    <div class=\"card-body-divide\">\n                        <div class=\"card-content-key\">Updated Date</div>\n                        <div class=\"card-content-value\">\n                            ").concat(this.whoisData.registryData.updatedDateNormalized || '-', "\n                        </div>\n                    </div>\n                    <div class=\"card-body-divide-last-child\">\n                        <div class=\"card-content-key\">Expires Date</div>\n                        <div class=\"card-content-value\">\n                            ").concat(this.whoisData.registryData.expiresDateNormalized || '-', "\n                        </div>\n                    </div>\n                </div>\n            </div>\n            ").concat(this.registrant, "\n            <div class=\"card\">\n                <div class=\"card-header\">Registrar Information</div>\n                <div class=\"card-body\">\n                    <div class=\"card-body-divide\">\n                        <div class=\"card-content-key\">Name</div>\n                        <div class=\"card-content-value\">\n                            ").concat(this.whoisData.registryData.registrarName || '-', "\n                        </div>\n                    </div>\n                    <div class=\"card-body-divide\">\n                        <div class=\"card-content-key\">Email</div>\n                        <div class=\"card-content-value\">\n                            ").concat(this.whoisData.contactEmail || '-', "\n                        </div>\n                    </div>\n                    <div class=\"card-body-divide\">\n                        <div class=\"card-content-key\">IANA ID</div>\n                        <div class=\"card-content-value\">\n                            ").concat(this.whoisData.registryData.registrarIANAID || '-', "\n                        </div>\n                    </div>\n                    <div class=\"card-body-divide\">\n                        <div class=\"card-content-key\">Whois Server</div>\n                        <div class=\"card-content-value\">\n                            ").concat(this.whoisData.registryData.whoisServer || '-', "\n                        </div>\n                    </div>\n                    <div class=\"card-body-divide-last-child\">\n                        <div class=\"card-content-key\">Status</div>\n                        <div class=\"card-content-value\">").concat(this.status || '', "</div>\n                    </div>\n                </div>\n            </div>\n            <div class=\"last-update\">Last updated at ").concat(this.whoisData.audit.updatedDate || '-', "</div>\n        ");
-    }
-  }]);
-
-  return WhoisLookup;
-}( /*#__PURE__*/_wrapNativeSuper(HTMLElement));
-
-customElements.define('whois-lookup', WhoisLookup);
-
-/***/ }),
-
 /***/ 147:
 /***/ ((module) => {
 
 "use strict";
-module.exports = JSON.parse('{"name":"mydo","version":"2.0.0","description":"Domain lookup","main":"index.js","scripts":{"lint":"eslint","start-dev":"webpack-dev-server --config webpack.dev.js --open","build":"webpack --config webpack.prod.js"},"author":"rohman","license":"ISC","dependencies":{"regenerator-runtime":"^0.13.9"},"devDependencies":{"@babel/core":"^7.15.8","@babel/preset-env":"^7.15.8","babel-eslint":"^10.1.0","babel-loader":"^8.2.3","copy-webpack-plugin":"^9.0.1","css-loader":"^4.3.0","css-minimizer-webpack-plugin":"^3.1.1","cssnano":"^5.0.10","eslint":"^7.32.0","eslint-config-airbnb-base":"^14.2.1","eslint-plugin-import":"^2.25.2","favicons":"^6.2.2","favicons-webpack-plugin":"^5.0.2","file-loader":"^6.2.0","html-loader":"^1.3.2","html-webpack-plugin":"^5.5.0","mini-css-extract-plugin":"^2.4.4","postcss":"^8.3.11","style-loader":"^1.3.0","webpack":"^5.60.0","webpack-cli":"^4.9.1","webpack-dev-server":"^4.3.1","webpack-merge":"^5.8.0"}}');
+module.exports = JSON.parse('{"name":"mydo","version":"2.0.1","description":"Domain lookup","main":"index.js","scripts":{"lint":"eslint","start-dev":"webpack-dev-server --config webpack.dev.js --open","build":"webpack --config webpack.prod.js"},"author":"rohman","license":"ISC","dependencies":{"regenerator-runtime":"^0.13.9"},"devDependencies":{"@babel/core":"^7.15.8","@babel/preset-env":"^7.15.8","babel-eslint":"^10.1.0","babel-loader":"^8.2.3","copy-webpack-plugin":"^9.0.1","css-loader":"^4.3.0","css-minimizer-webpack-plugin":"^3.1.1","cssnano":"^5.0.10","eslint":"^7.32.0","eslint-config-airbnb-base":"^14.2.1","eslint-plugin-import":"^2.25.2","favicons":"^6.2.2","favicons-webpack-plugin":"^5.0.2","file-loader":"^6.2.0","html-loader":"^1.3.2","html-webpack-plugin":"^5.5.0","mini-css-extract-plugin":"^2.4.4","postcss":"^8.3.11","style-loader":"^1.3.0","webpack":"^5.60.0","webpack-cli":"^4.9.1","webpack-dev-server":"^4.3.1","webpack-merge":"^5.8.0"}}');
 
 /***/ })
 
@@ -1609,8 +1403,120 @@ var ApiSource = /*#__PURE__*/function () {
 var error_page = __webpack_require__(107);
 // EXTERNAL MODULE: ./src/script/views/components/input-search.js
 var input_search = __webpack_require__(995);
-// EXTERNAL MODULE: ./src/script/views/components/whois-lookup.js
-var whois_lookup = __webpack_require__(390);
+;// CONCATENATED MODULE: ./src/script/helper/dateFormat.js
+var DateFormat = {
+  timeFromNow: function timeFromNow(date) {
+    var fromDate = new Date(date);
+    var difference = fromDate - new Date();
+    var units = {
+      year: 1000 * 60 * 60 * 24 * 365,
+      month: 1000 * 60 * 60 * 24 * (365 / 12),
+      day: 1000 * 60 * 60 * 24,
+      hour: 1000 * 60 * 60,
+      minute: 1000 * 60,
+      second: 1000
+    };
+    var rtf = new Intl.RelativeTimeFormat('en', {
+      numeric: 'auto'
+    });
+    var result; // eslint-disable-next-line no-restricted-syntax
+
+    for (var unit in units) {
+      if (Math.abs(difference) > units[unit] || unit === 'second') {
+        result = rtf.format(Math.round(difference / units[unit]), unit);
+        break;
+      }
+    }
+
+    return result;
+  }
+};
+/* harmony default export */ const dateFormat = (DateFormat);
+;// CONCATENATED MODULE: ./src/script/views/components/whois-lookup.js
+function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
+
+function whois_lookup_classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function whois_lookup_defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function whois_lookup_createClass(Constructor, protoProps, staticProps) { if (protoProps) whois_lookup_defineProperties(Constructor.prototype, protoProps); if (staticProps) whois_lookup_defineProperties(Constructor, staticProps); return Constructor; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
+
+function _createSuper(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct(); return function _createSuperInternal() { var Super = _getPrototypeOf(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = _getPrototypeOf(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _possibleConstructorReturn(this, result); }; }
+
+function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } else if (call !== void 0) { throw new TypeError("Derived constructors may only return object or undefined"); } return _assertThisInitialized(self); }
+
+function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
+
+function _wrapNativeSuper(Class) { var _cache = typeof Map === "function" ? new Map() : undefined; _wrapNativeSuper = function _wrapNativeSuper(Class) { if (Class === null || !_isNativeFunction(Class)) return Class; if (typeof Class !== "function") { throw new TypeError("Super expression must either be null or a function"); } if (typeof _cache !== "undefined") { if (_cache.has(Class)) return _cache.get(Class); _cache.set(Class, Wrapper); } function Wrapper() { return _construct(Class, arguments, _getPrototypeOf(this).constructor); } Wrapper.prototype = Object.create(Class.prototype, { constructor: { value: Wrapper, enumerable: false, writable: true, configurable: true } }); return _setPrototypeOf(Wrapper, Class); }; return _wrapNativeSuper(Class); }
+
+function _construct(Parent, args, Class) { if (_isNativeReflectConstruct()) { _construct = Reflect.construct; } else { _construct = function _construct(Parent, args, Class) { var a = [null]; a.push.apply(a, args); var Constructor = Function.bind.apply(Parent, a); var instance = new Constructor(); if (Class) _setPrototypeOf(instance, Class.prototype); return instance; }; } return _construct.apply(null, arguments); }
+
+function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Boolean.prototype.valueOf.call(Reflect.construct(Boolean, [], function () {})); return true; } catch (e) { return false; } }
+
+function _isNativeFunction(fn) { return Function.toString.call(fn).indexOf("[native code]") !== -1; }
+
+function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
+
+function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
+
+
+
+var WhoisLookup = /*#__PURE__*/function (_HTMLElement) {
+  _inherits(WhoisLookup, _HTMLElement);
+
+  var _super = _createSuper(WhoisLookup);
+
+  function WhoisLookup() {
+    whois_lookup_classCallCheck(this, WhoisLookup);
+
+    return _super.apply(this, arguments);
+  }
+
+  whois_lookup_createClass(WhoisLookup, [{
+    key: "connectedCallback",
+    value: function connectedCallback() {
+      this.render();
+    }
+  }, {
+    key: "whoisRecordData",
+    set: function set(data) {
+      this.whoisData = data;
+
+      if (this.whoisData.ips) {
+        var ips = this.whoisData.ips;
+        this.ip = ips.toString().replace(/,/g, '<br>');
+      }
+
+      if (this.whoisData.registryData.nameServers) {
+        var hostNames = this.whoisData.registryData.nameServers.hostNames;
+        hostNames = hostNames.toString().replace(/,/g, '<br>');
+        this.hostName = hostNames.toLowerCase();
+      }
+
+      if (this.whoisData.registryData.status) {
+        var status = this.whoisData.registryData.status;
+        this.status = status.toString().replace(/\s/g, '<br>');
+      }
+    }
+  }, {
+    key: "render",
+    value: function render() {
+      if (this.whoisData.registrant) {
+        this.registrant = "\n                <div class=\"card\">\n                    <div class=\"card-header\">Registrant Information</div>\n                    <div class=\"card-body\">\n                        <div class=\"card-body-divide\">\n                            <div class=\"card-content-key\">Organization</div>\n                            <div class=\"card-content-value\">\n                                ".concat(this.whoisData.registrant.organization || this.whoisData.registrant.name || '-', "\n                            </div>\n                        </div>\n                        <div class=\"card-body-divide\">\n                            <div class=\"card-content-key\">State/Province</div>\n                            <div class=\"card-content-value\">\n                                ").concat(this.whoisData.registrant.state || '-', "\n                            </div>\n                        </div>\n                        <div class=\"card-body-divide\">\n                            <div class=\"card-content-key\">Country</div>\n                            <div class=\"card-content-value\">\n                                ").concat(this.whoisData.registrant.country || '-', "\n                            </div>\n                        </div>\n                        <div class=\"card-body-divide\">\n                            <div class=\"card-content-key\">Country Code</div>\n                            <div class=\"card-content-value\">\n                                ").concat(this.whoisData.registrant.countryCode || '-', "\n                            </div>\n                        </div>\n                    </div>\n                </div>\n            ");
+      } else {
+        this.registrant = '';
+      }
+
+      this.innerHTML = "\n            <div class=\"card\">\n                <div class=\"card-header\">Domain Information</div>\n                <div class=\"card-body\">\n                    <div class=\"card-body-divide\">\n                        <div class=\"card-content-key\">Name</div>\n                        <div class=\"card-content-value\">".concat(this.whoisData.domainName || '-', "</div>\n                    </div>\n                    <div class=\"card-body-divide\">\n                        <div class=\"card-content-key\">IP Address</div>\n                        <div class=\"card-content-value\">").concat(this.ip || '-', "</div>\n                    </div>\n                    <div class=\"card-body-divide\">\n                        <div class=\"card-content-key\">Name Server</div>\n                        <div class=\"card-content-value\">").concat(this.hostName || '-', "</div>\n                    </div>\n                </div>\n            </div>\n            <div class=\"card\">\n                <div class=\"card-header\">Important Dates</div>\n                <div class=\"card-body\">\n                    <div class=\"card-body-divide\">\n                        <div class=\"card-content-key\">Created Date</div>\n                        <div class=\"card-content-value\">\n                            ").concat(this.whoisData.registryData.createdDateNormalized || '-', "\n                        </div>\n                    </div>\n                    <div class=\"card-body-divide\">\n                        <div class=\"card-content-key\">Updated Date</div>\n                        <div class=\"card-content-value\">\n                            ").concat(this.whoisData.registryData.updatedDateNormalized || '-', "\n                        </div>\n                    </div>\n                    <div class=\"card-body-divide\">\n                        <div class=\"card-content-key\">Expires Date</div>\n                        <div class=\"card-content-value\">\n                            ").concat(this.whoisData.registryData.expiresDateNormalized || '-', "\n                        </div>\n                    </div>\n                </div>\n            </div>\n            ").concat(this.registrant, "\n            <div class=\"card\">\n                <div class=\"card-header\">Registrar Information</div>\n                <div class=\"card-body\">\n                    <div class=\"card-body-divide\">\n                        <div class=\"card-content-key\">Name</div>\n                        <div class=\"card-content-value\">\n                            ").concat(this.whoisData.registryData.registrarName || '-', "\n                        </div>\n                    </div>\n                    <div class=\"card-body-divide\">\n                        <div class=\"card-content-key\">Email</div>\n                        <div class=\"card-content-value\">\n                            ").concat(this.whoisData.contactEmail || '-', "\n                        </div>\n                    </div>\n                    <div class=\"card-body-divide\">\n                        <div class=\"card-content-key\">IANA ID</div>\n                        <div class=\"card-content-value\">\n                            ").concat(this.whoisData.registryData.registrarIANAID || '-', "\n                        </div>\n                    </div>\n                    <div class=\"card-body-divide\">\n                        <div class=\"card-content-key\">Whois Server</div>\n                        <div class=\"card-content-value\">\n                            ").concat(this.whoisData.registryData.whoisServer || '-', "\n                        </div>\n                    </div>\n                    <div class=\"card-body-divide\">\n                        <div class=\"card-content-key\">Status</div>\n                        <div class=\"card-content-value\">").concat(this.status || '', "</div>\n                    </div>\n                </div>\n            </div>\n            <div class=\"last-update\">\n                Last updated ").concat(dateFormat.timeFromNow(this.whoisData.audit.updatedDate) || '-', "\n            </div>\n        ");
+    }
+  }]);
+
+  return WhoisLookup;
+}( /*#__PURE__*/_wrapNativeSuper(HTMLElement));
+
+customElements.define('whois-lookup', WhoisLookup);
 ;// CONCATENATED MODULE: ./src/script/views/pages/whois-home.js
 function whois_home_asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) { try { var info = gen[key](arg); var value = info.value; } catch (error) { reject(error); return; } if (info.done) { resolve(value); } else { Promise.resolve(value).then(_next, _throw); } }
 
@@ -1620,7 +1526,7 @@ function whois_home_asyncToGenerator(fn) { return function () { var self = this,
 
 
 
-var Home = {
+var Whois = {
   render: function render() {
     return whois_home_asyncToGenerator( /*#__PURE__*/regeneratorRuntime.mark(function _callee() {
       return regeneratorRuntime.wrap(function _callee$(_context) {
@@ -1646,6 +1552,7 @@ var Home = {
         while (1) {
           switch (_context2.prev = _context2.next) {
             case 0:
+              document.title = 'Whois - MyDo';
               input = document.getElementById('whois-input');
               button = document.getElementById('whois-button');
               button.addEventListener('click', function () {
@@ -1659,7 +1566,7 @@ var Home = {
                 }
               });
 
-            case 4:
+            case 5:
             case "end":
               return _context2.stop();
           }
@@ -1712,7 +1619,7 @@ var Home = {
     }))();
   }
 };
-/* harmony default export */ const whois_home = (Home);
+/* harmony default export */ const whois_home = (Whois);
 // EXTERNAL MODULE: ./src/script/views/components/domain-lookup.js
 var domain_lookup = __webpack_require__(61);
 ;// CONCATENATED MODULE: ./src/script/views/pages/domain-availability.js
@@ -1750,6 +1657,7 @@ var DomainAvailability = {
         while (1) {
           switch (_context2.prev = _context2.next) {
             case 0:
+              document.title = 'Domain Availability - MyDo';
               input = document.getElementById('domain-input');
               button = document.getElementById('domain-button');
               button.addEventListener('click', function () {
@@ -1763,7 +1671,7 @@ var DomainAvailability = {
                 }
               });
 
-            case 4:
+            case 5:
             case "end":
               return _context2.stop();
           }
@@ -1823,7 +1731,7 @@ var DomainAvailability = {
 };
 /* harmony default export */ const domain_availability = (DomainAvailability);
 // EXTERNAL MODULE: ./src/script/views/components/geolocation-lookup.js
-var geolocation_lookup = __webpack_require__(569);
+var geolocation_lookup = __webpack_require__(390);
 ;// CONCATENATED MODULE: ./src/script/views/pages/ip-geolocation.js
 function ip_geolocation_asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) { try { var info = gen[key](arg); var value = info.value; } catch (error) { reject(error); return; } if (info.done) { resolve(value); } else { Promise.resolve(value).then(_next, _throw); } }
 
@@ -1859,6 +1767,7 @@ var IpGeolocation = {
         while (1) {
           switch (_context2.prev = _context2.next) {
             case 0:
+              document.title = 'IP Geolocation - MyDo';
               input = document.getElementById('geolocation-input');
               button = document.getElementById('geolocation-button');
               button.addEventListener('click', function () {
@@ -1870,7 +1779,7 @@ var IpGeolocation = {
                 }
               });
 
-            case 4:
+            case 5:
             case "end":
               return _context2.stop();
           }
@@ -1925,8 +1834,121 @@ var IpGeolocation = {
   }
 };
 /* harmony default export */ const ip_geolocation = (IpGeolocation);
-// EXTERNAL MODULE: ./src/script/views/components/email-lookup.js
-var email_lookup = __webpack_require__(185);
+;// CONCATENATED MODULE: ./src/script/views/components/email-lookup.js
+function email_lookup_typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { email_lookup_typeof = function _typeof(obj) { return typeof obj; }; } else { email_lookup_typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return email_lookup_typeof(obj); }
+
+function email_lookup_classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function email_lookup_defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function email_lookup_createClass(Constructor, protoProps, staticProps) { if (protoProps) email_lookup_defineProperties(Constructor.prototype, protoProps); if (staticProps) email_lookup_defineProperties(Constructor, staticProps); return Constructor; }
+
+function email_lookup_inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) email_lookup_setPrototypeOf(subClass, superClass); }
+
+function email_lookup_createSuper(Derived) { var hasNativeReflectConstruct = email_lookup_isNativeReflectConstruct(); return function _createSuperInternal() { var Super = email_lookup_getPrototypeOf(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = email_lookup_getPrototypeOf(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return email_lookup_possibleConstructorReturn(this, result); }; }
+
+function email_lookup_possibleConstructorReturn(self, call) { if (call && (email_lookup_typeof(call) === "object" || typeof call === "function")) { return call; } else if (call !== void 0) { throw new TypeError("Derived constructors may only return object or undefined"); } return email_lookup_assertThisInitialized(self); }
+
+function email_lookup_assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
+
+function email_lookup_wrapNativeSuper(Class) { var _cache = typeof Map === "function" ? new Map() : undefined; email_lookup_wrapNativeSuper = function _wrapNativeSuper(Class) { if (Class === null || !email_lookup_isNativeFunction(Class)) return Class; if (typeof Class !== "function") { throw new TypeError("Super expression must either be null or a function"); } if (typeof _cache !== "undefined") { if (_cache.has(Class)) return _cache.get(Class); _cache.set(Class, Wrapper); } function Wrapper() { return email_lookup_construct(Class, arguments, email_lookup_getPrototypeOf(this).constructor); } Wrapper.prototype = Object.create(Class.prototype, { constructor: { value: Wrapper, enumerable: false, writable: true, configurable: true } }); return email_lookup_setPrototypeOf(Wrapper, Class); }; return email_lookup_wrapNativeSuper(Class); }
+
+function email_lookup_construct(Parent, args, Class) { if (email_lookup_isNativeReflectConstruct()) { email_lookup_construct = Reflect.construct; } else { email_lookup_construct = function _construct(Parent, args, Class) { var a = [null]; a.push.apply(a, args); var Constructor = Function.bind.apply(Parent, a); var instance = new Constructor(); if (Class) email_lookup_setPrototypeOf(instance, Class.prototype); return instance; }; } return email_lookup_construct.apply(null, arguments); }
+
+function email_lookup_isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Boolean.prototype.valueOf.call(Reflect.construct(Boolean, [], function () {})); return true; } catch (e) { return false; } }
+
+function email_lookup_isNativeFunction(fn) { return Function.toString.call(fn).indexOf("[native code]") !== -1; }
+
+function email_lookup_setPrototypeOf(o, p) { email_lookup_setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return email_lookup_setPrototypeOf(o, p); }
+
+function email_lookup_getPrototypeOf(o) { email_lookup_getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return email_lookup_getPrototypeOf(o); }
+
+
+
+var EmailLookup = /*#__PURE__*/function (_HTMLElement) {
+  email_lookup_inherits(EmailLookup, _HTMLElement);
+
+  var _super = email_lookup_createSuper(EmailLookup);
+
+  function EmailLookup() {
+    email_lookup_classCallCheck(this, EmailLookup);
+
+    return _super.apply(this, arguments);
+  }
+
+  email_lookup_createClass(EmailLookup, [{
+    key: "connectedCallback",
+    value: function connectedCallback() {
+      this.render();
+    }
+  }, {
+    key: "emailRecordData",
+    set: function set(data) {
+      this.emailData = data;
+
+      if (this.emailData.formatCheck.toLowerCase() === 'true') {
+        this.formatCheck = '<p class="green">The email address is valid</p>';
+      } else {
+        this.formatCheck = '<p class="red">The email address is invalid</p>';
+      }
+
+      if (this.emailData.smtpCheck.toLowerCase() === 'true') {
+        this.smtpCheck = '<p class="green">The email address exists and can receive email over SMTP.</p>';
+      } else {
+        this.smtpCheck = "\n                <p class=\"red\">\n                    The email address doesn't exist on the target SMTP server,\n                    doesn't use SMTP protocol or temporarily couldn't receive messages.\n                </p>";
+      }
+
+      if (this.emailData.dnsCheck.toLowerCase() === 'true') {
+        this.dnsCheck = '<p class="green">The domain in the email address has passed DNS check.</p>';
+      } else {
+        this.dnsCheck = '<p class="red">The domain in email address hasn\'t passed DNS check.</p>';
+      }
+
+      if (this.emailData.freeCheck.toLowerCase() === 'true') {
+        this.freeCheck = '<p class="green">The email address is free.</p>';
+      } else {
+        this.freeCheck = '<p class="green">The email address is paid.</p>';
+      }
+
+      if (this.emailData.disposableCheck.toLowerCase() === 'true') {
+        this.disposableCheck = '<p class="red">The email address is disposable.</p>';
+      } else {
+        this.disposableCheck = '<p class="green">The email address isn\'t disposable.</p>';
+      }
+
+      if (this.emailData.catchAllCheck.toLowerCase() === 'true') {
+        this.catchAllCheck = '<p class="green">The mail server has a <i>"catch-all"</i> address.</p>';
+      } else {
+        this.catchAllCheck = '<p class="red">The mail server doesn\'t have a <i>"catch-all"</i> address.</p>';
+      }
+
+      if (this.emailData.mxRecords) {
+        var mxRecords = this.emailData.mxRecords;
+        mxRecords = mxRecords.toString().replace(/,/g, '<br>');
+        this.mxRecord = mxRecords.toLowerCase();
+      } else {
+        this.mxRecord = '-';
+      }
+
+      if (this.emailData.formatCheck.toLowerCase() === 'true' && this.emailData.dnsCheck.toLowerCase() === 'true') {
+        this.result = "<p class=\"green\"><b>Yey! ".concat(this.emailData.emailAddress, " is valid.</b></p>");
+        this.illustraion = '<img src="assets/illustration/check.svg" alt="Email valid" class="illustration">';
+      } else {
+        this.result = "<p class=\"red\"><b>Sorry, ".concat(this.emailData.emailAddress, " is invalid.</b></p>");
+        this.illustraion = '<img src="assets/illustration/cross.svg" alt="Email invalid" class="illustration">';
+      }
+    }
+  }, {
+    key: "render",
+    value: function render() {
+      this.innerHTML = "\n            <div class=\"content pb-8\">\n                ".concat(this.illustraion, "\n                ").concat(this.result, "\n                <p>Check detail below</p>\n            </div>\n            <div class=\"card\">\n                <div class=\"card-header\">Email Verification Detail</div>\n                <div class=\"card-body\">\n                    <div class=\"card-body-divide\">\n                        <div class=\"card-content-key\">Email address</div>\n                        <div class=\"card-content-value\">").concat(this.emailData.emailAddress, "</div>\n                    </div>\n                    <div class=\"card-body-divide\">\n                        <div class=\"card-content-key\">Email address check</div>\n                        <div class=\"card-content-value\">").concat(this.formatCheck, "</div>\n                    </div>\n                    <div class=\"card-body-divide\">\n                        <div class=\"card-content-key\">SMTP check</div>\n                        <div class=\"card-content-value\">").concat(this.smtpCheck, "</div>\n                    </div>\n                    <div class=\"card-body-divide\">\n                        <div class=\"card-content-key\">Domain name system check</div>\n                        <div class=\"card-content-value\">").concat(this.dnsCheck, "</div>\n                    </div>\n                    <div class=\"card-body-divide\">\n                        <div class=\"card-content-key\">Free email address check</div>\n                        <div class=\"card-content-value\">").concat(this.freeCheck, "</div>\n                    </div>\n                    <div class=\"card-body-divide\">\n                        <div class=\"card-content-key\">Check email provider for abuse</div>\n                        <div class=\"card-content-value\">").concat(this.disposableCheck, "</div>\n                    </div>\n                    <div class=\"card-body-divide\">\n                        <div class=\"card-content-key\">Catch all emails address</div>\n                        <div class=\"card-content-value\">").concat(this.catchAllCheck, "</div>\n                    </div>\n                    <div class=\"card-body-divide\">\n                        <div class=\"card-content-key\">mxRecords</div>\n                        <div class=\"card-content-value\">").concat(this.mxRecord, "</div>\n                    </div>\n                </div>\n            </div>            \n            <div class=\"last-update\">\n                Last updated ").concat(dateFormat.timeFromNow(this.emailData.audit.auditUpdatedDate) || '-', "\n            </div>\n        ");
+    }
+  }]);
+
+  return EmailLookup;
+}( /*#__PURE__*/email_lookup_wrapNativeSuper(HTMLElement));
+
+customElements.define('email-lookup', EmailLookup);
 // EXTERNAL MODULE: ./src/script/views/components/input-checkbox.js
 var input_checkbox = __webpack_require__(171);
 ;// CONCATENATED MODULE: ./src/script/views/pages/email-verification.js
@@ -1965,6 +1987,7 @@ var EmailVerification = {
         while (1) {
           switch (_context2.prev = _context2.next) {
             case 0:
+              document.title = 'Email Verification - MyDo';
               input = document.getElementById('email-input');
               button = document.getElementById('email-button');
               checkbox = document.getElementById('email-checkbox');
@@ -1979,7 +2002,7 @@ var EmailVerification = {
                 }
               });
 
-            case 5:
+            case 6:
             case "end":
               return _context2.stop();
           }
@@ -2064,10 +2087,11 @@ var About = {
         while (1) {
           switch (_context2.prev = _context2.next) {
             case 0:
+              document.title = 'About - MyDo';
               aboutContainer = document.querySelector('#about-description');
               aboutContainer.innerHTML = "\n            <p class=\"about-title\">About MyDo</p>\n            <p>MyDo is an application that provides domain and email information.</p>\n            <p class=\"about-services\">Our services</p>\n            <ul class=\"service-list\">\n                <li>\n                    <p>Whois Lookup</p>\n                    <p>Provides the registration details, also known as the WHOIS record data,</p>\n                    <p>of a domain name, an IP address, or an email address.</p>\n                </li>\n                <li>\n                    <p>Domain Availability Check</p>\n                    <p>Instantly know which domains can be purchased.</p>\n                </li>\n                <li>\n                    <p>IP Geolocation Lookup</p>\n                    <p>Identify web visitors and users\u2019 geographical location.</p>\n                </li>\n                <li>\n                    <p>Email Verification Check</p>\n                    <p>Verify the existence, validity & quality of any email address.</p>\n                </li>\n            </ul>\n            <p class=\"mb-4\">\n                Data taken from\n                <a href=\"https://whoisxmlapi.com\" target=\"_blank\" class=\"link\">WhoisXMLAPI</a>.\n            </p>\n            <p class=\"mb-4\">\n                Developed by\n                <a href=\"https://github.com/ar-rohman\" target=\"_blank\" class=\"link\">Rohman</a>\n            </p>\n            <p class=\"pb-8\">Version ".concat(version, "</p>\n        ");
 
-            case 2:
+            case 3:
             case "end":
               return _context2.stop();
           }
@@ -2086,7 +2110,7 @@ var About = {
 var routes = {
   '/': whois_home,
   // default page
-  '/home': whois_home,
+  '/whois': whois_home,
   '/domain-availability': domain_availability,
   '/ip-geolocation': ip_geolocation,
   '/email-verification': email_verification,
@@ -2232,13 +2256,13 @@ var hamburger = document.querySelector('#hamburger');
 var navigation = document.querySelector('#navigation');
 var drawer = document.querySelector('#drawer');
 var content = document.querySelector('#page-content');
-var home = document.getElementById('home-link');
+var whois = document.getElementById('whois-link');
 var domainAvailability = document.getElementById('domain-availability-link');
 var ipGeolocation = document.getElementById('ip-geolocation-link');
 var emailVerification = document.getElementById('email-verification-link');
 var src_about = document.getElementById('about-link');
 var links = document.querySelectorAll('.menu-link');
-var clickedLinks = [home, domainAvailability, ipGeolocation, emailVerification, src_about];
+var clickedLinks = [whois, domainAvailability, ipGeolocation, emailVerification, src_about];
 var src_app = new app({
   hamburger: hamburger,
   navigation: navigation,
