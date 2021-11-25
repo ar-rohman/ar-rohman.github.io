@@ -1,7 +1,7 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "238ba6e8264fb2282d68",
-    "url": "/portfolio/glow/css/app.f9c1cf9a.css"
+    "revision": "a7bf2701ba8f7aa79815",
+    "url": "/portfolio/glow/css/app.cf6f89ea.css"
   },
   {
     "revision": "d5793c8972ce0e9198646a9bf7aa596c",
@@ -120,51 +120,51 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/portfolio/glow/img/icons/safari-pinned-tab.svg"
   },
   {
-    "revision": "9a0686718d4909dfa5e106bf0e5918db",
+    "revision": "80295d7667a86d15345bac8a905a25f9",
     "url": "/portfolio/glow/index.html"
   },
   {
-    "revision": "78af53437191a4555c90",
-    "url": "/portfolio/glow/js/about.ccfa89d4.js"
+    "revision": "ef24347175e0c86f7616",
+    "url": "/portfolio/glow/js/about.dac16329.js"
   },
   {
-    "revision": "238ba6e8264fb2282d68",
-    "url": "/portfolio/glow/js/app.9429ea1e.js"
+    "revision": "a7bf2701ba8f7aa79815",
+    "url": "/portfolio/glow/js/app.a9a08184.js"
   },
   {
-    "revision": "4fa3b1c251659208f8a0",
-    "url": "/portfolio/glow/js/chunk-vendors.3d04925a.js"
+    "revision": "acddac033f431eae6c00",
+    "url": "/portfolio/glow/js/chunk-vendors.a0dff9e7.js"
   },
   {
-    "revision": "1895b316920fcba79e7c",
-    "url": "/portfolio/glow/js/daily.87297aeb.js"
+    "revision": "d78319b0c9872d8a1a97",
+    "url": "/portfolio/glow/js/daily.a0b553a0.js"
   },
   {
-    "revision": "9de7b5b174dd730a1e42",
-    "url": "/portfolio/glow/js/detail.c88c8c9c.js"
+    "revision": "fc803aebd366d2182f14",
+    "url": "/portfolio/glow/js/detail.0785bf52.js"
   },
   {
-    "revision": "a8a909d6b6be6476c1fb",
-    "url": "/portfolio/glow/js/favorite.90106ee1.js"
+    "revision": "661c4a1e05144448cd66",
+    "url": "/portfolio/glow/js/favorite.459ab43b.js"
   },
   {
-    "revision": "b25ee620bdd096b3d292",
-    "url": "/portfolio/glow/js/hourly.7736e2fa.js"
+    "revision": "b7ffb3b31babb8927461",
+    "url": "/portfolio/glow/js/hourly.752af1d3.js"
   },
   {
-    "revision": "37f7777a50f64eaf72f2",
-    "url": "/portfolio/glow/js/not-found.893ab741.js"
+    "revision": "bfe16626e26ba90466ee",
+    "url": "/portfolio/glow/js/not-found.1ee5cb01.js"
   },
   {
-    "revision": "4a4355fd432491541d3e",
-    "url": "/portfolio/glow/js/search.a49dc30b.js"
+    "revision": "0d26a9c849ba6d2f1285",
+    "url": "/portfolio/glow/js/search.119691c6.js"
   },
   {
-    "revision": "40d1b252eb2901b4d1ad",
-    "url": "/portfolio/glow/js/setting.2c8c4797.js"
+    "revision": "9334ea00510bc4542e63",
+    "url": "/portfolio/glow/js/setting.5b94a436.js"
   },
   {
-    "revision": "2d811fa922045504acc7d984bf09a377",
+    "revision": "f2424fa08264de42ab57a1995ae18c25",
     "url": "/portfolio/glow/manifest.json"
   },
   {

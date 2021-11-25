@@ -1,4 +1,4 @@
-importScripts("/portfolio/glow/precache-manifest.9c209e94f8542bbb02de57c37b13c93e.js", "https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
+importScripts("/portfolio/glow/precache-manifest.84b78fd7a2bcd223fb58d7014574e1d5.js", "https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 /* eslint-disable no-underscore-dangle */
 /* eslint-disable no-undef */
