@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "a7bf2701ba8f7aa79815",
+    "revision": "ab0000b425c37599d1e1",
     "url": "/portfolio/glow/css/app.cf6f89ea.css"
   },
   {
@@ -120,48 +120,48 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/portfolio/glow/img/icons/safari-pinned-tab.svg"
   },
   {
-    "revision": "80295d7667a86d15345bac8a905a25f9",
+    "revision": "29e7a340cec450eec7c15cc90b532a65",
     "url": "/portfolio/glow/index.html"
   },
   {
-    "revision": "ef24347175e0c86f7616",
-    "url": "/portfolio/glow/js/about.dac16329.js"
+    "revision": "65945797bfbbafbeb0ff",
+    "url": "/portfolio/glow/js/about.ffae4641.js"
   },
   {
-    "revision": "a7bf2701ba8f7aa79815",
-    "url": "/portfolio/glow/js/app.a9a08184.js"
+    "revision": "ab0000b425c37599d1e1",
+    "url": "/portfolio/glow/js/app.ac967436.js"
   },
   {
     "revision": "acddac033f431eae6c00",
     "url": "/portfolio/glow/js/chunk-vendors.a0dff9e7.js"
   },
   {
-    "revision": "d78319b0c9872d8a1a97",
-    "url": "/portfolio/glow/js/daily.a0b553a0.js"
+    "revision": "7aa5b35f214b9215ec8d",
+    "url": "/portfolio/glow/js/daily.85ea2991.js"
   },
   {
-    "revision": "fc803aebd366d2182f14",
-    "url": "/portfolio/glow/js/detail.0785bf52.js"
+    "revision": "4137616c08128d0486a3",
+    "url": "/portfolio/glow/js/detail.1a1a4f45.js"
   },
   {
-    "revision": "661c4a1e05144448cd66",
-    "url": "/portfolio/glow/js/favorite.459ab43b.js"
+    "revision": "cea3450cbc39709737bb",
+    "url": "/portfolio/glow/js/favorite.c325b11e.js"
   },
   {
-    "revision": "b7ffb3b31babb8927461",
-    "url": "/portfolio/glow/js/hourly.752af1d3.js"
+    "revision": "873f2236cef4400be37d",
+    "url": "/portfolio/glow/js/hourly.6fc08304.js"
   },
   {
-    "revision": "bfe16626e26ba90466ee",
-    "url": "/portfolio/glow/js/not-found.1ee5cb01.js"
+    "revision": "769fed9cbb886dc57ba8",
+    "url": "/portfolio/glow/js/not-found.b56b2072.js"
   },
   {
-    "revision": "0d26a9c849ba6d2f1285",
-    "url": "/portfolio/glow/js/search.119691c6.js"
+    "revision": "309e4da26e1c640757b8",
+    "url": "/portfolio/glow/js/search.7dc2eba0.js"
   },
   {
-    "revision": "9334ea00510bc4542e63",
-    "url": "/portfolio/glow/js/setting.5b94a436.js"
+    "revision": "695c013faabf34115220",
+    "url": "/portfolio/glow/js/setting.80af1a47.js"
   },
   {
     "revision": "f2424fa08264de42ab57a1995ae18c25",
