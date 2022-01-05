@@ -12,11 +12,15 @@ module.exports = {
     module: {
         rules: [
             {
-                test: /\.(png|jpe?g|gif)$/i,
-                loader: 'file-loader',
-                options: {
-                    outputPath: 'assets/images',
+                test: /\.(svg|png|jpe?g|gif)$/i,
+                type: 'asset/resource',
+                generator: {
+                    filename: 'assets/images/[hash][ext][query]',
                 },
+                // loader: 'file-loader',
+                // options: {
+                //     outputPath: 'assets/images',
+                // },
             },
         ],
     },
@@ -29,8 +33,9 @@ module.exports = {
         new CopyWebpackPlugin({
             patterns: [
                 {
-                    from: path.resolve(__dirname, 'src/assets/'),
-                    to: path.resolve(__dirname, 'dist/assets/'),
+                    from: path.resolve(__dirname, 'src/assets/icons/'),
+                    // from: path.resolve(__dirname, 'src/assets/'),
+                    to: path.resolve(__dirname, 'dist/assets/icons/'),
                 },
             ],
         }),
