@@ -9,8 +9,8 @@ class PortfolioCard extends HTMLElement {
         this.description = data.description;
         this.hastag = data.hastag;
         this.demoLink = data.demoLink;
-        this.class = data.disableDemo ? 'disabled' : '';
         this.detailLink = data.detailLink;
+        this.disableDemo = data.demoLink ? '' : 'disabled';
     }
 
     render() {
@@ -34,7 +34,7 @@ class PortfolioCard extends HTMLElement {
                     <p>${this.hastag}</p>
                 </div>
                 <div class="card-footer">
-                    <a href="${this.demoLink}" target="_blank" rel="noopener" class="demo-link ${this.class}">Demo</a>
+                    <a href="${this.demoLink}" target="_blank" rel="noopener" class="demo-link ${this.disableDemo}">Demo</a>
                     <a href="${this.detailLink}" class="detail-link">Detail</a>
                 </div>
             </div>

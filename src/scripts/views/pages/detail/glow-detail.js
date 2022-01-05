@@ -1,3 +1,4 @@
+import data from '../../../data';
 import '../../components/back-header';
 import '../../components/detail-page';
 import '../../components/section/footer-section';

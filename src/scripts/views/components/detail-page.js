@@ -12,8 +12,8 @@ class DetailPage extends HTMLElement {
         this.technologies = data.technologies.map((item) => `<li>${item}</li>`);
         this.repoLink = data.repoLink;
         this.demoLink = data.demoLink;
-        this.disableRepo = data.disableRepo ? 'disabled' : '';
-        this.disableDemo = data.disableDemo ? 'disabled' : '';
+        this.disableRepo = data.repoLink ? '' : 'disabled';
+        this.disableDemo = data.demoLink ? '' : 'disabled';
     }
 
     render() {

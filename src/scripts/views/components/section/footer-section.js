@@ -9,7 +9,7 @@ class FooterSection extends HTMLElement {
 
     render() {
         const className = this.navMenu ? 'footer-app' : 'footer-no-nav';
-        const assetSource = this.navMenu ? '<a href="#/assets-source" id="asset-sources" class="link">Asset sources</a>' : '';
+        const assetSource = this.navMenu ? '<a href="#/assets-source" class="link">Assets source</a>' : '';
         const year = (new Date()).getFullYear();
         this.innerHTML = `
             <footer>

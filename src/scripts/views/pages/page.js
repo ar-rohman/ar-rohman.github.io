@@ -1,3 +1,4 @@
+import data from '../../data';
 import '../components/section/header-section';
 import '../components/section/hello-section';
 import '../components/section/about-section';
@@ -5,6 +6,7 @@ import '../components/section/contact-section';
 import '../components/section/footer-section';
 import '../components/portfolio/glow-portfolio';
 import '../components/portfolio/mydo-portfolio';
+import '../components/portfolio-card';
 
 const Page = {
     async render() {
@@ -15,11 +17,7 @@ const Page = {
                 <div id="portfolio" class="portfolio">
                     <div class="max-content">
                         <div class="portfolio-section">Portfolio</div>
-                        <div class="portfolio-content">
-                            <glow-portfolio></glow-portfolio>
-                            <mydo-portfolio></mydo-portfolio>
-                            <glow-portfolio></glow-portfolio>
-                        </div>
+                        <div class="portfolio-content" id="js-portfolio-content"></div>
                     </div>
                 </div>
                 <about-section></about-section>
@@ -31,10 +29,19 @@ const Page = {
 
     async afterRender() {
         document.title = 'Portfolio - ArRohman';
+        const portfolioContent = document.getElementById('js-portfolio-content');
+        // .setAttribute("class", "democlass")
         const footerId = document.getElementById('footer-section');
         const footerSection = document.createElement('footer-section');
         footerSection.isNavMenu = true;
         footerId.appendChild(footerSection);
+        // console.log(data);
+        data.forEach((element) => {
+            const card = document.createElement('portfolio-card');
+            card.portfolioData = element;
+            portfolioContent.appendChild(card);
+            // console.log(item.title);
+        });
     },
 };
 
