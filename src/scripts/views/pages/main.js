@@ -8,7 +8,7 @@ import '../components/portfolio/glow-portfolio';
 import '../components/portfolio/mydo-portfolio';
 import '../components/portfolio-card';
 
-const Page = {
+const Main = {
     async render() {
         return `
             <header-section></header-section>
@@ -45,4 +45,4 @@ const Page = {
     },
 };
 
-export default Page;
+export default Main;

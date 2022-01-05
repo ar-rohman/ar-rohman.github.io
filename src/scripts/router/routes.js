@@ -1,9 +1,9 @@
-import Page from '../views/pages/page';
+import Main from '../views/pages/main';
 import AssetsSource from '../views/pages/assets-source';
 import PortfolioDetail from '../views/pages/portfolio-detail';
 
 const routes = {
-    '/': Page,
+    '/': Main,
     '/portfolio/:id': PortfolioDetail,
     '/assets-source': AssetsSource,
 };
