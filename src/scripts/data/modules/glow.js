@@ -1,11 +1,11 @@
 import portfolioImage from '../../../assets/portfolio/glow-maskable.png';
 
 const projectTitle = 'Glow';
-const projectslug = projectTitle.toLowerCase().replace(/\s/g, '-');
+const projectSlug = projectTitle.toLowerCase().replace(/\s/g, '-');
 
 export default {
     title: projectTitle,
-    slug: projectslug,
+    slug: projectSlug,
     description: 'Glow (Global Weather) is an application that provides weather data for any location on Earth.',
     image: portfolioImage,
     features: [
@@ -26,6 +26,6 @@ export default {
     ],
     hastag: 'Vue',
     demoLink: 'https://glow-forecast.web.app',
-    detailLink: `#/portfolio/${projectslug}`,
+    detailLink: `#/portfolio/${projectSlug}`,
     repoLink: '',
 };

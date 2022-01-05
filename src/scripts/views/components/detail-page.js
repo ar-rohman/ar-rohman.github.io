@@ -6,7 +6,7 @@ class DetailPage extends HTMLElement {
     }
 
     set data(data) {
-        this.title = data.title;
+        this.projectTitle = data.title;
         this.description = data.description;
         this.features = data.features.map((item) => `<li>${item}</li>`);
         this.technologies = data.technologies.map((item) => `<li>${item}</li>`);
@@ -23,7 +23,7 @@ class DetailPage extends HTMLElement {
                     <div class="max-content">
                         <div class="detail-content">
                             <div>
-                                <div class="detail-title">${this.title}</div>
+                                <div class="detail-title">${this.projectTitle}</div>
                                 <p class="detail-summary">${this.description}</p>
                                 <div class="detail-list-header">Features</div>
                                 <div class="detail-list">

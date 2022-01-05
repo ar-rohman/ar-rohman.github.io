@@ -5,7 +5,7 @@ class PortfolioCard extends HTMLElement {
 
     set portfolioData(data) {
         this.image = data.image;
-        this.title = data.title;
+        this.projectTitle = data.title;
         this.description = data.description;
         this.hastag = data.hastag;
         this.demoLink = data.demoLink;
@@ -17,9 +17,9 @@ class PortfolioCard extends HTMLElement {
         this.innerHTML = `
             <div class="card">
                 <div class="card-logo">
-                    <img src="${this.image}" alt="${this.title}" height="64" width="64">
+                    <img src="${this.image}" alt="${this.projectTitle}" height="64" width="64">
                 </div>
-                <div class="card-title">${this.title}</div>
+                <div class="card-title">${this.projectTitle}</div>
                 <div class="card-content">
                     <p>${this.description}</p>
                 </div>
