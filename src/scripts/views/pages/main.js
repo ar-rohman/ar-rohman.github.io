@@ -4,8 +4,6 @@ import '../components/section/hello-section';
 import '../components/section/about-section';
 import '../components/section/contact-section';
 import '../components/section/footer-section';
-import '../components/portfolio/glow-portfolio';
-import '../components/portfolio/mydo-portfolio';
 import '../components/portfolio-card';
 
 const Main = {
