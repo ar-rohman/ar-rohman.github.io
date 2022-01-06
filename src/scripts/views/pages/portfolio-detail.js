@@ -14,6 +14,7 @@ export default {
     },
 
     afterRender() {
+        window.scrollTo({ top: 0, behavior: 'instant' });
         const slug = UrlParser.parseUrl();
         const detailData = data.filter((item) => item.slug === slug.id)[0];
         document.title = `${detailData.title} Detail - ArRohman`;
