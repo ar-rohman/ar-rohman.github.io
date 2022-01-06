@@ -160,6 +160,7 @@ header {
     color: #ffffff;
     animation-name: bounce;
     animation-timing-function: ease;
+    cursor:pointer;
 }
 .chevron-down-rounded:hover {
     background-color: #059669;

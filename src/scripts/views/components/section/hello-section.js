@@ -1,8 +1,16 @@
+import ActiveNav from '../../../utils/active-nav';
 import helloIllustration from '../../../../assets/illustrations/hello.svg';
 
 class HelloSection extends HTMLElement {
     connectedCallback() {
         this.render();
+        this.navActiveState();
+    }
+
+    navActiveState() {
+        this.goToPoftfolio = document.getElementById('portfolio-go-to');
+        // console.log(this.goToPoftfolio);
+        ActiveNav.click([this.goToPoftfolio]);
     }
 
     render() {
@@ -21,13 +29,13 @@ class HelloSection extends HTMLElement {
                         </div>
                         <div class="chevron-down">
                             <div class="chevron-down-content">
-                                <a class="chevron-down-rounded" href="#portfolio">
+                                <div id="portfolio-go-to" class="chevron-down-rounded" tabindex="0">
                                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
                                         stroke="currentColor">
                                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                                             d="M19 13l-7 7-7-7m14-8l-7 7-7-7" />
                                     </svg>
-                                </a>
+                                </div>
                             </div>
                         </div>
                     </div>

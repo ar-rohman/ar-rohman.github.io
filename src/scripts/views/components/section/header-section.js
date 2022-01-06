@@ -8,7 +8,6 @@ class HeaderSection extends HTMLElement {
 
     navActiveState() {
         this.navigation = document.querySelectorAll('.menu-nav');
-        // console.log(this.navigation);
         ActiveNav.click(this.navigation);
     }
 

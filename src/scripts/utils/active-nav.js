@@ -10,8 +10,10 @@ const ActiveNav = {
                 const section = link.id.split('-')[0];
                 const sectionId = document.getElementById(section);
                 sectionId.scrollIntoView();
-                this.removeActiveState(navMenu);
-                this.addActiveState(link);
+                if (navMenu.length > 1) {
+                    this.removeActiveState(navMenu);
+                    this.addActiveState(link);
+                }
 
                 const capitalized = this.pascalCase(section);
                 document.title = `${capitalized} - ArRohman`;
