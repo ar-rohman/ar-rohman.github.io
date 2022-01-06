@@ -34,6 +34,7 @@ const Main = {
         footerId.appendChild(footerSection);
         data.forEach((element) => {
             const card = document.createElement('portfolio-card');
+            card.setAttribute('class', 'card');
             card.portfolioData = element;
             portfolioContent.appendChild(card);
         });
