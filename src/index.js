@@ -13,6 +13,7 @@ import './styles/index.css';
 // const about = document.getElementById('about-link');
 // const links = document.querySelectorAll('.menu-link');
 const content = document.getElementById('app');
+// const navLink = document.querySelectorAll('.menu a');
 
 // const clickedLinks = [
 //     whois,

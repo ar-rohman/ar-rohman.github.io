@@ -3,7 +3,7 @@ import assetSourceIllustration from '../../../assets/illustrations/asset-source.
 import '../components/section/footer-section';
 
 const Page = {
-    async render() {
+    render() {
         return `
            <div id="js-asset-source-header"></div>
             <main>
@@ -41,7 +41,7 @@ const Page = {
         `;
     },
 
-    async afterRender() {
+    afterRender() {
         document.title = 'Asset Source - ArRohman';
         const assetSource = document.getElementById('js-asset-source-header');
         const backHeader = document.createElement('back-header');

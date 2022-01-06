@@ -1,6 +1,15 @@
+import ActiveNav from '../../../utils/active-nav';
+
 class HeaderSection extends HTMLElement {
     connectedCallback() {
         this.render();
+        this.navActiveState();
+    }
+
+    navActiveState() {
+        this.navigation = document.querySelectorAll('.menu-nav');
+        // console.log(this.navigation);
+        ActiveNav.click(this.navigation);
     }
 
     render() {
@@ -9,22 +18,22 @@ class HeaderSection extends HTMLElement {
                 <div class="max-content header-content">
                     <div class="brand">ArRohman</div>
                     <nav class="menu">
-                        <a href="#hello" id="hello-nav" class="active">
-                            <svg xmlns="http://www.w3.org/2000/svg" class="outline" fill="none" viewBox="0 0 24 24"
+                        <div id="hello-nav" class="menu-nav active" tabindex="0">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="hide outline" fill="none" viewBox="0 0 24 24"
                                 stroke="currentColor">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                                     d="M7 11.5V14m0-2.5v-6a1.5 1.5 0 113 0m-3 6a1.5 1.5 0 00-3 0v2a7.5 7.5
                                     0 0015 0v-5a1.5 1.5 0 00-3 0m-6-3V11m0-5.5v-1a1.5 1.5 0 013 0v1m0
                                     0V11m0-5.5a1.5 1.5 0 013 0v3m0 0V11" />
                             </svg>
-                            <svg xmlns="http://www.w3.org/2000/svg" class="hide solid" viewBox="0 0 20 20" fill="currentColor">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="solid" viewBox="0 0 20 20" fill="currentColor">
                                 <path fill-rule="evenodd" d="M9 3a1 1 0 012 0v5.5a.5.5 0 001 0V4a1 1 0 112 0v4.5a.5.5 0 001 0V6a1
                                     1 0 112 0v5a7 7 0 11-14 0V9a1 1 0 012 0v2.5a.5.5 0 001 0V4a1 1 0 012 0v4.5a.5.5 0 001 0V3z"
                                     clip-rule="evenodd" />
                             </svg>
                             Hello!
-                        </a>
-                        <a href="#portfolio" id="portfolio-nav">
+                        </div>
+                        <div id="portfolio-nav" class="menu-nav" tabindex="0">
                             <svg xmlns="http://www.w3.org/2000/svg" class="outline" fill="none" viewBox="0 0 24 24"
                                 stroke="currentColor">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
@@ -36,8 +45,8 @@ class HeaderSection extends HTMLElement {
                                     11a2 2 0 012-2h12a2 2 0 012 2v4a2 2 0 01-2 2H4a2 2 0 01-2-2v-4z" />
                             </svg>
                             Portfolio
-                        </a>
-                        <a href="#about" id="about-nav">
+                        </div>
+                        <div id="about-nav" class="menu-nav" tabindex="0">
                             <svg xmlns="http://www.w3.org/2000/svg" class="outline" fill="none" viewBox="0 0 24 24"
                                 stroke="currentColor">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
@@ -48,8 +57,8 @@ class HeaderSection extends HTMLElement {
                                     0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clip-rule="evenodd" />
                             </svg>
                             About
-                        </a>
-                        <a href="#contact" id="contact-nav">
+                        </div>
+                        <div id="contact-nav" class="menu-nav" tabindex="0">
                             <svg xmlns="http://www.w3.org/2000/svg" class="outline" fill="none" viewBox="0 0 24 24"
                                 stroke="currentColor">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" 
@@ -63,7 +72,7 @@ class HeaderSection extends HTMLElement {
                                     1h-2C7.82 18 2 12.18 2 5V3z" />
                             </svg>
                             Contact
-                        </a>
+                        </div>
                     </nav>
                 </div>
             </header>
