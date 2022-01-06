@@ -17,10 +17,6 @@ module.exports = {
                 generator: {
                     filename: 'assets/images/[hash][ext][query]',
                 },
-                // loader: 'file-loader',
-                // options: {
-                //     outputPath: 'assets/images',
-                // },
             },
         ],
     },
@@ -34,7 +30,6 @@ module.exports = {
             patterns: [
                 {
                     from: path.resolve(__dirname, 'src/assets/icons/'),
-                    // from: path.resolve(__dirname, 'src/assets/'),
                     to: path.resolve(__dirname, 'dist/assets/icons/'),
                 },
             ],
