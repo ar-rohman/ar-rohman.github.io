@@ -1,4 +1,9 @@
 const ActiveNav = {
+
+    /**
+     * Add active class when nav menu clicked
+     * @param {HTMLElement} navMenu - A HTMLElement of navigation
+     */
     click(navMenu) {
         navMenu.forEach((link) => {
             link.addEventListener('click', () => {
@@ -14,6 +19,29 @@ const ActiveNav = {
         });
     },
 
+    /**
+     * Add active class when scrolled
+     * @param {HTMLElement} sections - A HTMLElement of section
+     * @param {HTMLElement} navigation - A HTMLElement of navigation
+     */
+    scroll(sections, navigation) {
+        window.addEventListener('scroll', () => {
+            let index = sections.length;
+
+            // Decrements the index value each iteration.
+            // see https://stackoverflow.com/a/55749862
+            while (--index >= 0 && window.scrollY + 50 < sections[index].offsetTop) {
+                // do nothing
+                // just to decrement index value
+            }
+            this.removeActiveState(navigation);
+
+            // add active class if within visible height of the element
+            if (window.scrollY - sections[index].offsetHeight < sections[index].offsetTop) {
+                this.addActiveState(navigation[index]);
+            }
+        });
+    },
     /**
      * Remove other active state if navigation link clicked
      * This is private method
