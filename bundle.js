@@ -1372,9 +1372,8 @@ var HelloSection = /*#__PURE__*/function (_HTMLElement) {
   }, {
     key: "navActiveState",
     value: function navActiveState() {
-      this.goToPoftfolio = document.getElementById('portfolio-go-to'); // console.log(this.goToPoftfolio);
-
-      active_nav.click([this.goToPoftfolio]);
+      this.goToPortfolio = document.getElementById('portfolio-go-to');
+      active_nav.click([this.goToPortfolio]);
     }
   }, {
     key: "render",
@@ -1720,26 +1719,16 @@ function app_defineProperties(target, props) { for (var i = 0; i < props.length;
 
 function app_createClass(Constructor, protoProps, staticProps) { if (protoProps) app_defineProperties(Constructor.prototype, protoProps); if (staticProps) app_defineProperties(Constructor, staticProps); Object.defineProperty(Constructor, "prototype", { writable: false }); return Constructor; }
 
-// import DrawerInitiator from '../utils/drawer-initiator';
 
- // import ActiveNav from './utils/active-nav';
-// import ActiveMenu from '../utils/active-menu';
+
 
 var App = /*#__PURE__*/function () {
   function App(content, navLink) {
     app_classCallCheck(this, App);
 
     this.content = content;
-    this.navLink = navLink; // this.initialAppShell();
-  } // initialAppShell() {
-  // DrawerInitiator.init({
-  //     hamburger: this.hamburger,
-  //     navigation: this.navigation,
-  //     drawer: this.drawer,
-  // });
-  // ActiveNav.click(this.navLink);
-  // }
-
+    this.navLink = navLink;
+  }
 
   app_createClass(App, [{
     key: "renderPage",
@@ -1783,26 +1772,8 @@ var App = /*#__PURE__*/function () {
 ;// CONCATENATED MODULE: ./src/index.js
 
 
- // const hamburger = document.querySelector('#hamburger');
-// const navigation = document.querySelector('#navigation');
-// const drawer = document.querySelector('#drawer');
-// const content = document.querySelector('#page-content');
-// const whois = document.getElementById('whois-link');
-// const domainAvailability = document.getElementById('domain-availability-link');
-// const ipGeolocation = document.getElementById('ip-geolocation-link');
-// const emailVerification = document.getElementById('email-verification-link');
-// const about = document.getElementById('about-link');
-// const links = document.querySelectorAll('.menu-link');
 
-var content = document.getElementById('app'); // const navLink = document.querySelectorAll('.menu a');
-// const clickedLinks = [
-//     whois,
-//     domainAvailability,
-//     ipGeolocation,
-//     emailVerification,
-//     about,
-// ];
-
+var content = document.getElementById('app');
 var src_app = new app(content);
 window.addEventListener('hashchange', function () {
   src_app.renderPage();
