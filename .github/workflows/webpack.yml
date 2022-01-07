@@ -8,6 +8,7 @@ on:
 jobs:
     build:
         if: github.event.pull_request.merged == true
+        
         runs-on: ubuntu-latest
 
         strategy:
@@ -20,16 +21,16 @@ jobs:
                 with:
                     persist-credentials: false
 
-        -   name: Install
-            run: npm install
+            -   name: Install
+                run: npm install
 
-        -   name: Build
-            run: |
-                npm ci
-                npm run build
+            -   name: Build
+                run: |
+                    npm ci
+                    npm run build
 
-        -   name: Deploy to GH Page
-            uses: JamesIves/github-pages-deploy-action@4.1.9
-            with:
-                branch: gh-pages
-                folder: dist
+            -   name: Deploy to GH Page
+                uses: JamesIves/github-pages-deploy-action@4.1.9
+                with:
+                    branch: gh-pages
+                    folder: dist
