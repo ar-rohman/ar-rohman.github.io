@@ -3,12 +3,13 @@ name: Build and Deploy to gh-page
 on:
     pull_request:
         branches: 
-            -   master      
+            -   master
+        types: [closed]
 
 jobs:
     build:
         if: github.event.pull_request.merged == true
-        
+
         runs-on: ubuntu-latest
 
         strategy:
