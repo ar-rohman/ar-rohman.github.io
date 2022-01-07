@@ -8,9 +8,8 @@ class HelloSection extends HTMLElement {
     }
 
     navActiveState() {
-        this.goToPoftfolio = document.getElementById('portfolio-go-to');
-        // console.log(this.goToPoftfolio);
-        ActiveNav.click([this.goToPoftfolio]);
+        this.goToPortfolio = document.getElementById('portfolio-go-to');
+        ActiveNav.click([this.goToPortfolio]);
     }
 
     render() {
