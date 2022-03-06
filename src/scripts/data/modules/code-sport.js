@@ -1,4 +1,4 @@
-import portfolioImage from '../../../assets/portfolio/code-sport.png';
+import portfolioImage from '@/assets/portfolio/code-sport.png';
 
 const projectTitle = 'Code Sport';
 const projectSlug = projectTitle.toLowerCase().replace(/\s/g, '-');

@@ -1,4 +1,4 @@
-import contactIllustration from '../../../../assets/illustrations/contact.svg';
+import contactIllustration from '@/assets/illustrations/contact.svg';
 
 class ContactSection extends HTMLElement {
     connectedCallback() {

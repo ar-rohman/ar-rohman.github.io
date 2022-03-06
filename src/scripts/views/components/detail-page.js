@@ -1,4 +1,4 @@
-import image from '../../../assets/illustrations/detail.svg';
+import image from '@/assets/illustrations/detail.svg';
 
 class DetailPage extends HTMLElement {
     connectedCallback() {

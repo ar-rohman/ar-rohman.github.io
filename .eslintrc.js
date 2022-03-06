@@ -1,3 +1,5 @@
+const path = require('path');
+
 module.exports = {
     env: {
         browser: true,
@@ -15,5 +17,12 @@ module.exports = {
         indent: ['error', 4],
         'import/no-extraneous-dependencies': ['error', { devDependencies: true }],
         'no-plusplus': 0,
+    },
+    settings: {
+        'import/resolver': {
+            alias: {
+                map: [['@', path.resolve(__dirname, 'src')]],
+            },
+        },
     },
 };

@@ -1,4 +1,4 @@
-import ActiveNav from '../../../utils/active-nav';
+import ActiveNav from '@/scripts/utils/active-nav';
 
 class HeaderSection extends HTMLElement {
     connectedCallback() {
