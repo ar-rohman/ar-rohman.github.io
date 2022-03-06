@@ -1,5 +1,5 @@
-import data from '../../data';
-import ActiveNav from '../../utils/active-nav';
+import data from '@/scripts/data';
+import ActiveNav from '@/scripts/utils/active-nav';
 import '../components/section/header-section';
 import '../components/section/hello-section';
 import '../components/section/about-section';

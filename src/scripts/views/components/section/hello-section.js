@@ -1,5 +1,5 @@
-import ActiveNav from '../../../utils/active-nav';
-import helloIllustration from '../../../../assets/illustrations/hello.svg';
+import ActiveNav from '@/scripts//utils/active-nav';
+import helloIllustration from '@/assets/illustrations/hello.svg';
 
 class HelloSection extends HTMLElement {
     connectedCallback() {

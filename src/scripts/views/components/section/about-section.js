@@ -1,4 +1,4 @@
-import aboutIllustration from '../../../../assets/illustrations/about.svg';
+import aboutIllustration from '@/assets/illustrations/about.svg';
 
 class AboutSection extends HTMLElement {
     connectedCallback() {

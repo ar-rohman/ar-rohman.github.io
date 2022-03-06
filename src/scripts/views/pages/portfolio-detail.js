@@ -1,5 +1,5 @@
-import UrlParser from '../../router/url-parser';
-import data from '../../data';
+import data from '@/scripts/data';
+import UrlParser from '@/scripts/router/url-parser';
 import '../components/back-header';
 import '../components/detail-page';
 import '../components/section/footer-section';

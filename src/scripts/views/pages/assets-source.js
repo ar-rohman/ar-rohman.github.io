@@ -1,6 +1,6 @@
-import '../components/back-header';
-import assetSourceIllustration from '../../../assets/illustrations/asset-source.svg';
 import '../components/section/footer-section';
+import '../components/back-header';
+import assetSourceIllustration from '@/assets/illustrations/asset-source.svg';
 
 const Page = {
     render() {
