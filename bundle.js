@@ -1005,6 +1005,14 @@ module.exports = __webpack_require__.p + "assets/images/b305a3a405a115762a93.png
 
 /***/ }),
 
+/***/ 320:
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+module.exports = __webpack_require__.p + "assets/images/b6d2e67edf38e9af83c8.png";
+
+/***/ }),
+
 /***/ 861:
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
@@ -1157,12 +1165,31 @@ var dishmenu_projectSlug = dishmenu_projectTitle.toLowerCase().replace(/\s/g, '-
   detailLink: "#/portfolio/".concat(dishmenu_projectSlug),
   repoLink: 'https://github.com/ar-rohman/dishmenu'
 });
+// EXTERNAL MODULE: ./src/assets/portfolio/moview.png
+var moview = __webpack_require__(320);
+;// CONCATENATED MODULE: ./src/scripts/data/modules/moview.js
+
+var moview_projectTitle = 'MOVIEW';
+var moview_projectSlug = moview_projectTitle.toLowerCase().replace(/\s/g, '-');
+/* harmony default export */ const modules_moview = ({
+  title: moview_projectTitle,
+  slug: moview_projectSlug,
+  description: 'Moview is where people find their favorite movies and discover movies around the world.',
+  image: moview,
+  features: ['Discover movies', 'Play trailers', 'Share movies', 'Add / remove favorite movies', 'Dark mode'],
+  technologies: ['Vue 3', 'Tailwindcss', 'Pinia', 'Indexed DB', 'Local Storage'],
+  hastag: 'Vue',
+  demoLink: 'https://moview-app.vercel.app',
+  detailLink: "#/portfolio/".concat(moview_projectSlug),
+  repoLink: ''
+});
 ;// CONCATENATED MODULE: ./src/scripts/data/index.js
 
 
 
 
-/* harmony default export */ const data = ([glow, modules_code_sport, modules_mydo, modules_dishmenu]);
+
+/* harmony default export */ const data = ([modules_moview, glow, modules_code_sport, modules_mydo, modules_dishmenu]);
 ;// CONCATENATED MODULE: ./src/scripts/utils/active-nav.js
 var ActiveNav = {
   /**
