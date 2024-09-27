@@ -1,7 +1,7 @@
 /******/ (() => { // webpackBootstrap
 /******/ 	var __webpack_modules__ = ({
 
-/***/ 86:
+/***/ 358:
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
 /* module decorator */ module = __webpack_require__.nmd(module);
@@ -733,7 +733,7 @@ try {
 
 /***/ }),
 
-/***/ 725:
+/***/ 305:
 /***/ (() => {
 
 function _typeof(obj) { "@babel/helpers - typeof"; return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (obj) { return typeof obj; } : function (obj) { return obj && "function" == typeof Symbol && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }, _typeof(obj); }
@@ -800,7 +800,7 @@ customElements.define('back-header', BackHeader);
 
 /***/ }),
 
-/***/ 134:
+/***/ 152:
 /***/ (() => {
 
 function _typeof(obj) { "@babel/helpers - typeof"; return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (obj) { return typeof obj; } : function (obj) { return obj && "function" == typeof Symbol && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }, _typeof(obj); }
@@ -872,7 +872,7 @@ customElements.define('portfolio-card', PortfolioCard);
 
 /***/ }),
 
-/***/ 161:
+/***/ 372:
 /***/ (() => {
 
 function _typeof(obj) { "@babel/helpers - typeof"; return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (obj) { return typeof obj; } : function (obj) { return obj && "function" == typeof Symbol && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }, _typeof(obj); }
@@ -939,86 +939,6 @@ var FooterSection = /*#__PURE__*/function (_HTMLElement) {
 
 customElements.define('footer-section', FooterSection);
 
-/***/ }),
-
-/***/ 659:
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
-
-"use strict";
-module.exports = __webpack_require__.p + "assets/images/8ec75bd0699fb1b5cc9b.svg";
-
-/***/ }),
-
-/***/ 952:
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
-
-"use strict";
-module.exports = __webpack_require__.p + "assets/images/c55c86ae569236dfd2bf.svg";
-
-/***/ }),
-
-/***/ 968:
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
-
-"use strict";
-module.exports = __webpack_require__.p + "assets/images/aefcfdbac49aa586e7ea.svg";
-
-/***/ }),
-
-/***/ 192:
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
-
-"use strict";
-module.exports = __webpack_require__.p + "assets/images/976ec549a6180a1290d4.svg";
-
-/***/ }),
-
-/***/ 547:
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
-
-"use strict";
-module.exports = __webpack_require__.p + "assets/images/ef6d71edc096239b9618.svg";
-
-/***/ }),
-
-/***/ 757:
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
-
-"use strict";
-module.exports = __webpack_require__.p + "assets/images/50942c31ff14d2dd6ace.png";
-
-/***/ }),
-
-/***/ 493:
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
-
-"use strict";
-module.exports = __webpack_require__.p + "assets/images/463c0edd649c91443d56.png";
-
-/***/ }),
-
-/***/ 849:
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
-
-"use strict";
-module.exports = __webpack_require__.p + "assets/images/b305a3a405a115762a93.png";
-
-/***/ }),
-
-/***/ 320:
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
-
-"use strict";
-module.exports = __webpack_require__.p + "assets/images/b6d2e67edf38e9af83c8.png";
-
-/***/ }),
-
-/***/ 861:
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
-
-"use strict";
-module.exports = __webpack_require__.p + "assets/images/866ce345281c92d1a286.png";
-
 /***/ })
 
 /******/ 	});
@@ -1066,14 +986,13 @@ module.exports = __webpack_require__.p + "assets/images/866ce345281c92d1a286.png
 /******/ 	})();
 /******/ 	
 /************************************************************************/
-var __webpack_exports__ = {};
 // This entry need to be wrapped in an IIFE because it need to be in strict mode.
 (() => {
 "use strict";
 
 // EXTERNAL MODULE: ./node_modules/regenerator-runtime/runtime.js
-var runtime = __webpack_require__(86);
-;// CONCATENATED MODULE: ./src/scripts/router/url-parser.js
+var runtime = __webpack_require__(358);
+;// ./src/scripts/router/url-parser.js
 var UrlParser = {
   parseUrl: function parseUrl() {
     var url = window.location.hash.slice(1).toLowerCase();
@@ -1093,9 +1012,9 @@ var UrlParser = {
   }
 };
 /* harmony default export */ const url_parser = (UrlParser);
-// EXTERNAL MODULE: ./src/assets/portfolio/glow-maskable.png
-var glow_maskable = __webpack_require__(849);
-;// CONCATENATED MODULE: ./src/scripts/data/modules/glow.js
+;// ./src/assets/portfolio/glow-maskable.png
+const glow_maskable_namespaceObject = __webpack_require__.p + "assets/images/b305a3a405a115762a93.png";
+;// ./src/scripts/data/modules/glow.js
 
 var projectTitle = 'Glow';
 var projectSlug = projectTitle.toLowerCase().replace(/\s/g, '-');
@@ -1103,7 +1022,7 @@ var projectSlug = projectTitle.toLowerCase().replace(/\s/g, '-');
   title: projectTitle,
   slug: projectSlug,
   description: 'Glow (Global Weather) is an application that provides weather data for any location on Earth.',
-  image: glow_maskable,
+  image: glow_maskable_namespaceObject,
   features: ['Current weather forecast', 'Hourly weather forecast', 'Daily weather forecast', 'Search weather forecast by city', 'Set default city &amp; temperature', 'Support dark mode', 'Bilingual'],
   technologies: ['Vue', 'Tailwind', 'Progressive Web App (PWA)', 'Indexed DB', 'Local Storage'],
   hastag: 'Vue',
@@ -1111,17 +1030,17 @@ var projectSlug = projectTitle.toLowerCase().replace(/\s/g, '-');
   detailLink: "#/portfolio/".concat(projectSlug),
   repoLink: ''
 });
-// EXTERNAL MODULE: ./src/assets/portfolio/code-sport.png
-var code_sport = __webpack_require__(757);
-;// CONCATENATED MODULE: ./src/scripts/data/modules/code-sport.js
+;// ./src/assets/portfolio/code-sport.png
+const code_sport_namespaceObject = __webpack_require__.p + "assets/images/50942c31ff14d2dd6ace.png";
+;// ./src/scripts/data/modules/code-sport.js
 
 var code_sport_projectTitle = 'Code Sport';
 var code_sport_projectSlug = code_sport_projectTitle.toLowerCase().replace(/\s/g, '-');
-/* harmony default export */ const modules_code_sport = ({
+/* harmony default export */ const code_sport = ({
   title: code_sport_projectTitle,
   slug: code_sport_projectSlug,
   description: 'Provides information about Champions League.',
-  image: code_sport,
+  image: code_sport_namespaceObject,
   features: ['Matches', 'Standings', 'Teams', 'Scorers'],
   technologies: ['Vue', 'Tailwind', 'Progressive Web Application (PWA)', 'SPA (Single Page Application)'],
   hastag: 'Vue',
@@ -1129,17 +1048,17 @@ var code_sport_projectSlug = code_sport_projectTitle.toLowerCase().replace(/\s/g
   detailLink: "#/portfolio/".concat(code_sport_projectSlug),
   repoLink: 'https://github.com/ar-rohman/code-sport'
 });
-// EXTERNAL MODULE: ./src/assets/portfolio/mydo.png
-var mydo = __webpack_require__(861);
-;// CONCATENATED MODULE: ./src/scripts/data/modules/mydo.js
+;// ./src/assets/portfolio/mydo.png
+const mydo_namespaceObject = __webpack_require__.p + "assets/images/866ce345281c92d1a286.png";
+;// ./src/scripts/data/modules/mydo.js
 
 var mydo_projectTitle = 'MyDo';
 var mydo_projectSlug = mydo_projectTitle.toLowerCase().replace(/\s/g, '-');
-/* harmony default export */ const modules_mydo = ({
+/* harmony default export */ const mydo = ({
   title: mydo_projectTitle,
   slug: mydo_projectSlug,
   description: 'MyDo is an application that provides domain and email information.',
-  image: mydo,
+  image: mydo_namespaceObject,
   features: ['Whois Lookup', 'Domain Availability Check', 'IP Geolocation Lookup', 'Email Verification Check'],
   technologies: ['Javascript', 'Webpack', 'SPA (Single Page Application)'],
   hastag: 'Javascript',
@@ -1147,17 +1066,17 @@ var mydo_projectSlug = mydo_projectTitle.toLowerCase().replace(/\s/g, '-');
   detailLink: "#/portfolio/".concat(mydo_projectSlug),
   repoLink: 'https://github.com/ar-rohman/mydo'
 });
-// EXTERNAL MODULE: ./src/assets/portfolio/dishmenu.png
-var dishmenu = __webpack_require__(493);
-;// CONCATENATED MODULE: ./src/scripts/data/modules/dishmenu.js
+;// ./src/assets/portfolio/dishmenu.png
+const dishmenu_namespaceObject = __webpack_require__.p + "assets/images/463c0edd649c91443d56.png";
+;// ./src/scripts/data/modules/dishmenu.js
 
 var dishmenu_projectTitle = 'dishmenu';
 var dishmenu_projectSlug = dishmenu_projectTitle.toLowerCase().replace(/\s/g, '-');
-/* harmony default export */ const modules_dishmenu = ({
+/* harmony default export */ const dishmenu = ({
   title: dishmenu_projectTitle,
   slug: dishmenu_projectSlug,
   description: 'Dish information and review (dummy).',
-  image: dishmenu,
+  image: dishmenu_namespaceObject,
   features: ['Dish list', 'Dish Review'],
   technologies: ['Javascript', 'Webpack', 'Progressive Web Application (PWA)', 'SPA (Single Page Application)', 'Indexed DB'],
   hastag: 'Javascript',
@@ -1165,17 +1084,17 @@ var dishmenu_projectSlug = dishmenu_projectTitle.toLowerCase().replace(/\s/g, '-
   detailLink: "#/portfolio/".concat(dishmenu_projectSlug),
   repoLink: 'https://github.com/ar-rohman/dishmenu'
 });
-// EXTERNAL MODULE: ./src/assets/portfolio/moview.png
-var moview = __webpack_require__(320);
-;// CONCATENATED MODULE: ./src/scripts/data/modules/moview.js
+;// ./src/assets/portfolio/moview.png
+const moview_namespaceObject = __webpack_require__.p + "assets/images/b6d2e67edf38e9af83c8.png";
+;// ./src/scripts/data/modules/moview.js
 
 var moview_projectTitle = 'MOVIEW';
 var moview_projectSlug = moview_projectTitle.toLowerCase().replace(/\s/g, '-');
-/* harmony default export */ const modules_moview = ({
+/* harmony default export */ const moview = ({
   title: moview_projectTitle,
   slug: moview_projectSlug,
   description: 'Moview is where people find their favorite movies and discover movies around the world.',
-  image: moview,
+  image: moview_namespaceObject,
   features: ['Discover movies', 'Play trailers', 'Share movies', 'Add / remove favorite movies', 'Dark mode'],
   technologies: ['Vue 3', 'Tailwindcss', 'Pinia', 'Indexed DB', 'Local Storage'],
   hastag: 'Vue',
@@ -1183,14 +1102,14 @@ var moview_projectSlug = moview_projectTitle.toLowerCase().replace(/\s/g, '-');
   detailLink: "#/portfolio/".concat(moview_projectSlug),
   repoLink: ''
 });
-;// CONCATENATED MODULE: ./src/scripts/data/index.js
+;// ./src/scripts/data/index.js
 
 
 
 
 
-/* harmony default export */ const data = ([modules_moview, glow, modules_code_sport, modules_mydo, modules_dishmenu]);
-;// CONCATENATED MODULE: ./src/scripts/utils/active-nav.js
+/* harmony default export */ const data = ([moview, glow, code_sport, mydo, dishmenu]);
+;// ./src/scripts/utils/active-nav.js
 var ActiveNav = {
   /**
    * Add active class when nav menu clicked
@@ -1280,7 +1199,7 @@ var ActiveNav = {
   }
 };
 /* harmony default export */ const active_nav = (ActiveNav);
-;// CONCATENATED MODULE: ./src/scripts/views/components/section/header-section.js
+;// ./src/scripts/views/components/section/header-section.js
 function _typeof(obj) { "@babel/helpers - typeof"; return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (obj) { return typeof obj; } : function (obj) { return obj && "function" == typeof Symbol && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }, _typeof(obj); }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -1345,9 +1264,9 @@ var HeaderSection = /*#__PURE__*/function (_HTMLElement) {
 }( /*#__PURE__*/_wrapNativeSuper(HTMLElement));
 
 customElements.define('header-section', HeaderSection);
-// EXTERNAL MODULE: ./src/assets/illustrations/hello.svg
-var hello = __webpack_require__(547);
-;// CONCATENATED MODULE: ./src/scripts/views/components/section/hello-section.js
+;// ./src/assets/illustrations/hello.svg
+const hello_namespaceObject = __webpack_require__.p + "assets/images/ef6d71edc096239b9618.svg";
+;// ./src/scripts/views/components/section/hello-section.js
 function hello_section_typeof(obj) { "@babel/helpers - typeof"; return hello_section_typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (obj) { return typeof obj; } : function (obj) { return obj && "function" == typeof Symbol && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }, hello_section_typeof(obj); }
 
 function hello_section_classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -1405,7 +1324,7 @@ var HelloSection = /*#__PURE__*/function (_HTMLElement) {
   }, {
     key: "render",
     value: function render() {
-      this.innerHTML = "\n            <div id=\"hello\" class=\"hello\">\n                <div class=\"max-content\">\n                    <div class=\"hello-section\">\n                        <div class=\"hello-content\">\n                            <div>\n                                <p>Hi,</p>\n                                <p>Rohman is here.</p>\n                                <p>This is my portfolio page.</p>\n                                <p>Let's explore them.</p>\n                            </div>\n                            <img src=\"".concat(hello, "\" alt=\"Hello\" class=\"hello-illustration\">\n                        </div>\n                        <div class=\"chevron-down\">\n                            <div class=\"chevron-down-content\">\n                                <div id=\"portfolio-go-to\" class=\"chevron-down-rounded\" tabindex=\"0\">\n                                    <svg xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" viewBox=\"0 0 24 24\"\n                                        stroke=\"currentColor\">\n                                        <path stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\"\n                                            d=\"M19 13l-7 7-7-7m14-8l-7 7-7-7\" />\n                                    </svg>\n                                </div>\n                            </div>\n                        </div>\n                    </div>\n                </div>\n            </div>\n        ");
+      this.innerHTML = "\n            <div id=\"hello\" class=\"hello\">\n                <div class=\"max-content\">\n                    <div class=\"hello-section\">\n                        <div class=\"hello-content\">\n                            <div>\n                                <p>Hi,</p>\n                                <p>Rohman is here.</p>\n                                <p>This is my portfolio page.</p>\n                                <p>Let's explore them.</p>\n                            </div>\n                            <img src=\"".concat(hello_namespaceObject, "\" alt=\"Hello\" class=\"hello-illustration\">\n                        </div>\n                        <div class=\"chevron-down\">\n                            <div class=\"chevron-down-content\">\n                                <div id=\"portfolio-go-to\" class=\"chevron-down-rounded\" tabindex=\"0\">\n                                    <svg xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" viewBox=\"0 0 24 24\"\n                                        stroke=\"currentColor\">\n                                        <path stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\"\n                                            d=\"M19 13l-7 7-7-7m14-8l-7 7-7-7\" />\n                                    </svg>\n                                </div>\n                            </div>\n                        </div>\n                    </div>\n                </div>\n            </div>\n        ");
     }
   }]);
 
@@ -1413,9 +1332,9 @@ var HelloSection = /*#__PURE__*/function (_HTMLElement) {
 }( /*#__PURE__*/hello_section_wrapNativeSuper(HTMLElement));
 
 customElements.define('hello-section', HelloSection);
-// EXTERNAL MODULE: ./src/assets/illustrations/about.svg
-var about = __webpack_require__(659);
-;// CONCATENATED MODULE: ./src/scripts/views/components/section/about-section.js
+;// ./src/assets/illustrations/about.svg
+const about_namespaceObject = __webpack_require__.p + "assets/images/8ec75bd0699fb1b5cc9b.svg";
+;// ./src/scripts/views/components/section/about-section.js
 function about_section_typeof(obj) { "@babel/helpers - typeof"; return about_section_typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (obj) { return typeof obj; } : function (obj) { return obj && "function" == typeof Symbol && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }, about_section_typeof(obj); }
 
 function about_section_classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -1465,7 +1384,7 @@ var AboutSection = /*#__PURE__*/function (_HTMLElement) {
   }, {
     key: "render",
     value: function render() {
-      this.innerHTML = "\n            <div id=\"about\" class=\"about\">\n                <div class=\"max-content\">\n                    <div class=\"about-section\">About</div>\n                    <div class=\"about-content\">\n                        <img src=\"".concat(about, "\" alt=\"About\" class=\"about-illustration\">\n                        <div class=\"about-text\">\n                            <p>\n                                I am web developer based in Jakarta, ID\n                                who passionate about building excellent software\n                                that improves the lives of those around me.\n                            </p>\n                            <p>\n                                In my spare time I like to tinker on side projects for clients\n                                ranging from individuals and small businesses\n                                the way to large enterprise corporations.\n                            </p>\n                        </div>\n                    </div>\n                </div>\n            </div>\n        ");
+      this.innerHTML = "\n            <div id=\"about\" class=\"about\">\n                <div class=\"max-content\">\n                    <div class=\"about-section\">About</div>\n                    <div class=\"about-content\">\n                        <img src=\"".concat(about_namespaceObject, "\" alt=\"About\" class=\"about-illustration\">\n                        <div class=\"about-text\">\n                            <p>\n                                I am web developer based in Jakarta, ID\n                                who passionate about building excellent software\n                                that improves the lives of those around me.\n                            </p>\n                            <p>\n                                In my spare time I like to tinker on side projects for clients\n                                ranging from individuals and small businesses\n                                the way to large enterprise corporations.\n                            </p>\n                        </div>\n                    </div>\n                </div>\n            </div>\n        ");
     }
   }]);
 
@@ -1473,9 +1392,9 @@ var AboutSection = /*#__PURE__*/function (_HTMLElement) {
 }( /*#__PURE__*/about_section_wrapNativeSuper(HTMLElement));
 
 customElements.define('about-section', AboutSection);
-// EXTERNAL MODULE: ./src/assets/illustrations/contact.svg
-var contact = __webpack_require__(968);
-;// CONCATENATED MODULE: ./src/scripts/views/components/section/contact-section.js
+;// ./src/assets/illustrations/contact.svg
+const contact_namespaceObject = __webpack_require__.p + "assets/images/aefcfdbac49aa586e7ea.svg";
+;// ./src/scripts/views/components/section/contact-section.js
 function contact_section_typeof(obj) { "@babel/helpers - typeof"; return contact_section_typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (obj) { return typeof obj; } : function (obj) { return obj && "function" == typeof Symbol && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }, contact_section_typeof(obj); }
 
 function contact_section_classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -1525,7 +1444,7 @@ var ContactSection = /*#__PURE__*/function (_HTMLElement) {
   }, {
     key: "render",
     value: function render() {
-      this.innerHTML = "\n            <div id=\"contact\" class=\"contact\">\n                <div class=\"max-content\">\n                    <div class=\"contact-section\">Contact</div>\n                    <div class=\"contact-content\">\n                        <div>\n                            <p>If you wanna get in touch,</p> <p>talk to me about a project or just say hi,</p>\n                            <p>feel free to contact me via email at</p>\n                            <a href=\"mailto:kontak.rohman@gmail.com\" class=\"link\">kontak.rohman@gmail.com</a>\n                        </div>\n                        <img src=\"".concat(contact, "\" alt=\"Contact\" class=\"contact-illustration\">\n                    </div>\n                </div>\n            </div>\n        ");
+      this.innerHTML = "\n            <div id=\"contact\" class=\"contact\">\n                <div class=\"max-content\">\n                    <div class=\"contact-section\">Contact</div>\n                    <div class=\"contact-content\">\n                        <div>\n                            <p>If you wanna get in touch,</p> <p>talk to me about a project or just say hi,</p>\n                            <p>feel free to contact me via email at</p>\n                            <a href=\"mailto:kontak.rohman@gmail.com\" class=\"link\">kontak.rohman@gmail.com</a>\n                        </div>\n                        <img src=\"".concat(contact_namespaceObject, "\" alt=\"Contact\" class=\"contact-illustration\">\n                    </div>\n                </div>\n            </div>\n        ");
     }
   }]);
 
@@ -1534,10 +1453,10 @@ var ContactSection = /*#__PURE__*/function (_HTMLElement) {
 
 customElements.define('contact-section', ContactSection);
 // EXTERNAL MODULE: ./src/scripts/views/components/section/footer-section.js
-var footer_section = __webpack_require__(161);
+var footer_section = __webpack_require__(372);
 // EXTERNAL MODULE: ./src/scripts/views/components/portfolio-card.js
-var portfolio_card = __webpack_require__(134);
-;// CONCATENATED MODULE: ./src/scripts/views/pages/main.js
+var portfolio_card = __webpack_require__(152);
+;// ./src/scripts/views/pages/main.js
 function asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) { try { var info = gen[key](arg); var value = info.value; } catch (error) { reject(error); return; } if (info.done) { resolve(value); } else { Promise.resolve(value).then(_next, _throw); } }
 
 function _asyncToGenerator(fn) { return function () { var self = this, args = arguments; return new Promise(function (resolve, reject) { var gen = fn.apply(self, args); function _next(value) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "next", value); } function _throw(err) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "throw", err); } _next(undefined); }); }; }
@@ -1603,16 +1522,16 @@ var Main = {
 };
 /* harmony default export */ const main = (Main);
 // EXTERNAL MODULE: ./src/scripts/views/components/back-header.js
-var back_header = __webpack_require__(725);
-// EXTERNAL MODULE: ./src/assets/illustrations/asset-source.svg
-var asset_source = __webpack_require__(952);
-;// CONCATENATED MODULE: ./src/scripts/views/pages/assets-source.js
+var back_header = __webpack_require__(305);
+;// ./src/assets/illustrations/asset-source.svg
+const asset_source_namespaceObject = __webpack_require__.p + "assets/images/c55c86ae569236dfd2bf.svg";
+;// ./src/scripts/views/pages/assets-source.js
 
 
 
 var Page = {
   render: function render() {
-    return "\n           <div id=\"js-asset-source-header\"></div>\n            <main>\n                <div class=\"asset-source\">\n                    <div class=\"max-content\">\n                        <div class=\"asset-source-content\">\n                            <div>\n                                <div class=\"detail-summary\">Assets used in this website</div>\n                                <div class=\"detail-list-header\">Icon</div>\n                                <div class=\"detail-list\">\n                                    <ul>\n                                        <li>\n                                            <a href=\"https://heroicons.com/\" target=\"_blank\" rel=\"noopener\" class=\"link\">heroicons</a>\n                                        </li>\n                                    </ul>\n                                </div>\n                                <div class=\"detail-list-header\">Illustrations</div>\n                                <div class=\"detail-list\">\n                                    <ul>\n                                        <li>\n                                            <a href=\"https://drawkit.com/product/grape-illustration-pack\" target=\"_blank\" rel=\"noopener\" class=\"link\">\n                                                DrawKit\n                                            </a>\n                                            (with some changes)\n                                        </li>\n                                    </ul>\n                                </div>\n                            </div>\n                            <img src=\"".concat(asset_source, "\" alt=\"Asset Source\" class=\"asset-source-illustration\">\n                        </div>\n                    </div>\n                </div>\n            </main>\n            <footer-section></footer-section>\n        ");
+    return "\n           <div id=\"js-asset-source-header\"></div>\n            <main>\n                <div class=\"asset-source\">\n                    <div class=\"max-content\">\n                        <div class=\"asset-source-content\">\n                            <div>\n                                <div class=\"detail-summary\">Assets used in this website</div>\n                                <div class=\"detail-list-header\">Icon</div>\n                                <div class=\"detail-list\">\n                                    <ul>\n                                        <li>\n                                            <a href=\"https://heroicons.com/\" target=\"_blank\" rel=\"noopener\" class=\"link\">heroicons</a>\n                                        </li>\n                                    </ul>\n                                </div>\n                                <div class=\"detail-list-header\">Illustrations</div>\n                                <div class=\"detail-list\">\n                                    <ul>\n                                        <li>\n                                            <a href=\"https://drawkit.com/product/grape-illustration-pack\" target=\"_blank\" rel=\"noopener\" class=\"link\">\n                                                DrawKit\n                                            </a>\n                                            (with some changes)\n                                        </li>\n                                    </ul>\n                                </div>\n                            </div>\n                            <img src=\"".concat(asset_source_namespaceObject, "\" alt=\"Asset Source\" class=\"asset-source-illustration\">\n                        </div>\n                    </div>\n                </div>\n            </main>\n            <footer-section></footer-section>\n        ");
   },
   afterRender: function afterRender() {
     document.title = 'Asset Source - ArRohman';
@@ -1623,9 +1542,9 @@ var Page = {
   }
 };
 /* harmony default export */ const assets_source = (Page);
-// EXTERNAL MODULE: ./src/assets/illustrations/detail.svg
-var detail = __webpack_require__(192);
-;// CONCATENATED MODULE: ./src/scripts/views/components/detail-page.js
+;// ./src/assets/illustrations/detail.svg
+const detail_namespaceObject = __webpack_require__.p + "assets/images/976ec549a6180a1290d4.svg";
+;// ./src/scripts/views/components/detail-page.js
 function detail_page_typeof(obj) { "@babel/helpers - typeof"; return detail_page_typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (obj) { return typeof obj; } : function (obj) { return obj && "function" == typeof Symbol && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }, detail_page_typeof(obj); }
 
 function detail_page_classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -1691,7 +1610,7 @@ var DetailPage = /*#__PURE__*/function (_HTMLElement) {
   }, {
     key: "render",
     value: function render() {
-      this.innerHTML = "\n            <main>\n                <div class=\"detail\">\n                    <div class=\"max-content\">\n                        <div class=\"detail-content\">\n                            <div>\n                                <div class=\"detail-title\">".concat(this.projectTitle, "</div>\n                                <p class=\"detail-summary\">").concat(this.description, "</p>\n                                <div class=\"detail-list-header\">Features</div>\n                                <div class=\"detail-list\">\n                                    <ul>").concat(this.features.join(''), "</ul>\n                                </div>\n                                <div class=\"detail-list-header\">Technology used</div>\n                                <div class=\"detail-list\">\n                                    <ul>").concat(this.technologies.join(''), "</ul>\n                                </div>\n                                <div class=\"detail-button\">\n                                    <a href=\"").concat(this.repoLink, "\" target=\"_blank\" rel=\"noopener\" class=\"detail-button-repo ").concat(this.disableRepo, "\">\n                                        Repository\n                                    </a>\n                                    <a href=\"").concat(this.demoLink, "\" target=\"_blank\" rel=\"noopener\" class=\"detail-button-demo ").concat(this.disableDemo, "\">Demo</a>\n                                </div>\n                            </div>\n                            <img src=\"").concat(detail, "\" alt=\"Detail\" class=\"detail-illustration\">\n                        </div>\n                    </div>\n                </div>\n            </main>\n        ");
+      this.innerHTML = "\n            <main>\n                <div class=\"detail\">\n                    <div class=\"max-content\">\n                        <div class=\"detail-content\">\n                            <div>\n                                <div class=\"detail-title\">".concat(this.projectTitle, "</div>\n                                <p class=\"detail-summary\">").concat(this.description, "</p>\n                                <div class=\"detail-list-header\">Features</div>\n                                <div class=\"detail-list\">\n                                    <ul>").concat(this.features.join(''), "</ul>\n                                </div>\n                                <div class=\"detail-list-header\">Technology used</div>\n                                <div class=\"detail-list\">\n                                    <ul>").concat(this.technologies.join(''), "</ul>\n                                </div>\n                                <div class=\"detail-button\">\n                                    <a href=\"").concat(this.repoLink, "\" target=\"_blank\" rel=\"noopener\" class=\"detail-button-repo ").concat(this.disableRepo, "\">\n                                        Repository\n                                    </a>\n                                    <a href=\"").concat(this.demoLink, "\" target=\"_blank\" rel=\"noopener\" class=\"detail-button-demo ").concat(this.disableDemo, "\">Demo</a>\n                                </div>\n                            </div>\n                            <img src=\"").concat(detail_namespaceObject, "\" alt=\"Detail\" class=\"detail-illustration\">\n                        </div>\n                    </div>\n                </div>\n            </main>\n        ");
     }
   }]);
 
@@ -1699,7 +1618,7 @@ var DetailPage = /*#__PURE__*/function (_HTMLElement) {
 }( /*#__PURE__*/detail_page_wrapNativeSuper(HTMLElement));
 
 customElements.define('detail-page', DetailPage);
-;// CONCATENATED MODULE: ./src/scripts/views/pages/portfolio-detail.js
+;// ./src/scripts/views/pages/portfolio-detail.js
 
 
 
@@ -1725,7 +1644,7 @@ customElements.define('detail-page', DetailPage);
     detailPage.appendChild(element);
   }
 });
-;// CONCATENATED MODULE: ./src/scripts/router/routes.js
+;// ./src/scripts/router/routes.js
 
 
 
@@ -1735,7 +1654,7 @@ var routes = {
   '/assets-source': assets_source
 };
 /* harmony default export */ const router_routes = (routes);
-;// CONCATENATED MODULE: ./src/scripts/app.js
+;// ./src/scripts/app.js
 function app_asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) { try { var info = gen[key](arg); var value = info.value; } catch (error) { reject(error); return; } if (info.done) { resolve(value); } else { Promise.resolve(value).then(_next, _throw); } }
 
 function app_asyncToGenerator(fn) { return function () { var self = this, args = arguments; return new Promise(function (resolve, reject) { var gen = fn.apply(self, args); function _next(value) { app_asyncGeneratorStep(gen, resolve, reject, _next, _throw, "next", value); } function _throw(err) { app_asyncGeneratorStep(gen, resolve, reject, _next, _throw, "throw", err); } _next(undefined); }); }; }
@@ -1796,7 +1715,7 @@ var App = /*#__PURE__*/function () {
 }();
 
 /* harmony default export */ const app = (App);
-;// CONCATENATED MODULE: ./src/index.js
+;// ./src/index.js
 
 
 
