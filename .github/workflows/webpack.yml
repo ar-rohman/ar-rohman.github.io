@@ -1,24 +1,17 @@
 name: Build and Deploy to gh-page
 
 on:
-    pull_request:
+    push:
         branches: 
             -   master
-        types: [closed]
 
 jobs:
     build:
-        if: github.event.pull_request.merged == true
-
         runs-on: ubuntu-latest
-
-        strategy:
-            matrix:
-                node-version: [12.x, 14.x, 16.x]
         
         steps:
             -   name: Checkout
-                uses: actions/checkout@v2
+                uses: actions/checkout@v4
                 with:
                     persist-credentials: false
 
@@ -31,7 +24,7 @@ jobs:
                     npm run build
 
             -   name: Deploy to GH Page
-                uses: JamesIves/github-pages-deploy-action@4.1.9
+                uses: JamesIves/github-pages-deploy-action@v4
                 with:
                     branch: gh-pages
                     folder: dist
