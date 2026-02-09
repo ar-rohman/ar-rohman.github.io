@@ -1,8 +1,8 @@
 /******/ (() => { // webpackBootstrap
 /******/ 	var __webpack_modules__ = ({
 
-/***/ 358:
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+/***/ 358
+(module, __unused_webpack_exports, __webpack_require__) {
 
 /* module decorator */ module = __webpack_require__.nmd(module);
 function _typeof(o) { "@babel/helpers - typeof"; return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (o) { return typeof o; } : function (o) { return o && "function" == typeof Symbol && o.constructor === Symbol && o !== Symbol.prototype ? "symbol" : typeof o; }, _typeof(o); }
@@ -676,10 +676,10 @@ try {
   }
 }
 
-/***/ }),
+/***/ },
 
-/***/ 305:
-/***/ (() => {
+/***/ 305
+() {
 
 function _typeof(o) { "@babel/helpers - typeof"; return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (o) { return typeof o; } : function (o) { return o && "function" == typeof Symbol && o.constructor === Symbol && o !== Symbol.prototype ? "symbol" : typeof o; }, _typeof(o); }
 function _classCallCheck(a, n) { if (!(a instanceof n)) throw new TypeError("Cannot call a class as a function"); }
@@ -723,10 +723,10 @@ var BackHeader = /*#__PURE__*/function (_HTMLElement) {
 }(/*#__PURE__*/_wrapNativeSuper(HTMLElement));
 customElements.define('back-header', BackHeader);
 
-/***/ }),
+/***/ },
 
-/***/ 152:
-/***/ (() => {
+/***/ 152
+() {
 
 function _typeof(o) { "@babel/helpers - typeof"; return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (o) { return typeof o; } : function (o) { return o && "function" == typeof Symbol && o.constructor === Symbol && o !== Symbol.prototype ? "symbol" : typeof o; }, _typeof(o); }
 function _classCallCheck(a, n) { if (!(a instanceof n)) throw new TypeError("Cannot call a class as a function"); }
@@ -775,10 +775,10 @@ var PortfolioCard = /*#__PURE__*/function (_HTMLElement) {
 }(/*#__PURE__*/_wrapNativeSuper(HTMLElement));
 customElements.define('portfolio-card', PortfolioCard);
 
-/***/ }),
+/***/ },
 
-/***/ 372:
-/***/ (() => {
+/***/ 372
+() {
 
 function _typeof(o) { "@babel/helpers - typeof"; return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (o) { return typeof o; } : function (o) { return o && "function" == typeof Symbol && o.constructor === Symbol && o !== Symbol.prototype ? "symbol" : typeof o; }, _typeof(o); }
 function _classCallCheck(a, n) { if (!(a instanceof n)) throw new TypeError("Cannot call a class as a function"); }
@@ -824,7 +824,7 @@ var FooterSection = /*#__PURE__*/function (_HTMLElement) {
 }(/*#__PURE__*/_wrapNativeSuper(HTMLElement));
 customElements.define('footer-section', FooterSection);
 
-/***/ })
+/***/ }
 
 /******/ 	});
 /************************************************************************/
@@ -871,7 +871,7 @@ customElements.define('footer-section', FooterSection);
 /******/ 	})();
 /******/ 	
 /************************************************************************/
-// This entry need to be wrapped in an IIFE because it need to be in strict mode.
+// This entry needs to be wrapped in an IIFE because it needs to be in strict mode.
 (() => {
 "use strict";
 
